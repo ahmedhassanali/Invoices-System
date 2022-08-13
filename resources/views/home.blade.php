@@ -37,7 +37,7 @@
                             <div class="">
                                 <h4 class="tx-20 font-weight-bold mb-1 text-white">
 
-                                    {{ number_format(\App\Models\invoices::sum('Total'), 2) }}
+                                    {{ number_format(\App\Models\invoices::sum('total'), 2) }}
                                 </h4>
                                 <p class="mb-0 tx-12 text-white op-7">{{ \App\Models\invoices::count() }}</p>
                             </div>
@@ -62,10 +62,10 @@
                             <div class="">
                                 <h3 class="tx-20 font-weight-bold mb-1 text-white">
 
-                                    {{ number_format(\App\Models\invoices::where('Value_Status', 2)->sum('Total'), 2) }}
+                                    {{ number_format(\App\Models\invoices::where('value_status', 2)->sum('total'), 2) }}
 
                                 </h3>
-                                <p class="mb-0 tx-12 text-white op-7">{{ \App\Models\invoices::where('Value_Status', 2)->count() }}
+                                <p class="mb-0 tx-12 text-white op-7">{{ \App\Models\invoices::where('value_status', 2)->count() }}
                                 </p>
                             </div>
                             <span class="float-right my-auto mr-auto">
@@ -74,7 +74,7 @@
 
                                     @php
                                     $count_all= \App\Models\invoices::count();
-                                    $count_invoices2 = \App\Models\invoices::where('Value_Status', 2)->count();
+                                    $count_invoices2 = \App\Models\invoices::where('value_status', 2)->count();
                                     if($count_invoices2 == 0){
                                        echo $count_invoices2 = 0;
                                     }
@@ -102,11 +102,11 @@
                             <div class="">
                                 <h4 class="tx-20 font-weight-bold mb-1 text-white">
 
-                                    {{ number_format(\App\Models\invoices::where('Value_Status', 1)->sum('Total'), 2) }}
+                                    {{ number_format(\App\Models\invoices::where('value_status', 1)->sum('total'), 2) }}
 
                                 </h4>
                                 <p class="mb-0 tx-12 text-white op-7">
-                                    {{ \App\Models\invoices::where('Value_Status', 1)->count() }}
+                                    {{ \App\Models\invoices::where('value_status', 1)->count() }}
                                 </p>
                             </div>
                             <span class="float-right my-auto mr-auto">
@@ -114,7 +114,7 @@
                                 <span class="text-white op-7">
                                     @php
                                         $count_all= \App\Models\invoices::count();
-                                        $count_invoices1 =\App\Models\invoices::where('Value_Status', 1)->count();
+                                        $count_invoices1 =\App\Models\invoices::where('value_status', 1)->count();
                                         if($count_invoices1 == 0){
                                            echo $count_invoices1 = 0;
                                         }
@@ -141,11 +141,11 @@
                             <div class="">
                                 <h4 class="tx-20 font-weight-bold mb-1 text-white">
 
-                                    {{ number_format(\App\Models\invoices::where('Value_Status', 3)->sum('Total'), 2) }}
+                                    {{ number_format(\App\Models\invoices::where('value_status', 3)->sum('total'), 2) }}
 
                                 </h4>
                                 <p class="mb-0 tx-12 text-white op-7">
-                                    {{ \App\Models\invoices::where('Value_Status', 3)->count() }}
+                                    {{ \App\Models\invoices::where('value_status', 3)->count() }}
                                 </p>
                             </div>
                             <span class="float-right my-auto mr-auto">
@@ -153,7 +153,7 @@
                                 <span class="text-white op-7">
                                     @php
                                         $count_all= \App\Models\invoices::count();
-                                        $count_invoices1 = \App\Models\invoices::where('Value_Status', 1)->count();
+                                        $count_invoices1 = \App\Models\invoices::where('value_status', 1)->count();
                                         if($count_invoices1 == 0){
                                             echo $count_invoices1 = 0;
                                         }
