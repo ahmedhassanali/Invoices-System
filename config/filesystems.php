@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Mail\Attachment;
+
 return [
 
     /*
@@ -36,6 +38,11 @@ return [
             'throw' => false,
         ],
 
+        'public_uploads' => [
+            'deiver' => 'local',
+            'root' => public_path().'/attachments',
+        ],
+        
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),
@@ -43,6 +50,8 @@ return [
             'visibility' => 'public',
             'throw' => false,
         ],
+       
+       
 
         's3' => [
             'driver' => 's3',
