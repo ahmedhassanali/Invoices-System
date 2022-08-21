@@ -27,9 +27,8 @@
 												<h2>مرحبا بك</h2>
 												<h5 class="font-weight-semibold mb-4"> تسجيل الدخول</h5>
                                                 <form method="POST" action="{{ route('login') }}">
-													{{ csrf_field() }}
-													{{ method_field('post') }}
-										
+													@csrf
+													<input type="hidden" name="_token" value="{{ csrf_token() }}" />
 													<div class="form-group">
 													<label>البريد الالكتروني</label>
                                                     <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
