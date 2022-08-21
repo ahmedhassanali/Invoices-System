@@ -29,7 +29,9 @@ Auth::routes();
 Route::group(['middleware' => ['auth']], function() {
     
 // Route::get('invoice/destroy/{id}',[InvoicesController::class,'destroy']);
+Route::post('/', function () {return view('auth.login');});
 Route::get('/', function () {return view('auth.login');});
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('invoices/export', [InvoicesController::class, 'export'])->name('export_invoices');
 Route::get('invoice/edit/{id}',[InvoicesController::class,'edit']);
