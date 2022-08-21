@@ -43,4 +43,8 @@ class LoginController extends Controller
     {
         return ['email'=>$request->email , 'password'=>$request->password,'status'=>'مفعل'];
     }
+
+    public function dd(Request $request){
+        return $request;
+    }
 }
