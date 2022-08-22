@@ -29,7 +29,7 @@
 
 
 					<li class="slide my-3">
-						<a class="side-menu__item" data-toggle="slide" href="{{ url('/' . $page='#') }}">
+						<a class="side-menu__item" data-toggle="slide" href="">
 							<img src="{{asset('assets/img/icons/2.png') }}" style="width: 30px" class=" mx-2 nav-icon">
 							<span class="side-menu__label">الفواتير</span><i class="angle fe fe-chevron-down"></i></a>
 						<ul class="slide-menu">
