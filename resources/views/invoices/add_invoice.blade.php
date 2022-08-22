@@ -1,22 +1,5 @@
 @extends('layouts.master')
 
-
-{{-- <!-- Icons css -->
-<link href={{asset('public/assets/css/icons.css')}} rel="stylesheet">
-<!--  Custom Scroll bar-->
-<link href={{asset('public/assets/plugins/mscrollbar/jquery.mCustomScrollbar.css')}} rel="stylesheet"/>
-<!--  Sidebar css -->
-<link href={{asset('public/assets/plugins/sidebar/sidebar.css')}} rel="stylesheet">
-<!-- Sidemenu css -->
-<link rel="stylesheet" href={{asset('public/assets/css-rtl/sidemenu.css')}}>
-@yield('css')
-<!--- Style css -->
-<link href={{asset('public/assets/css-rtl/style.css')}} rel="stylesheet">
-<!--- Dark-mode css -->
-<link href={{asset('public/assets/css-rtl/style-dark.css')}} rel="stylesheet">
-<!---Skinmodes css-->
-<link href={{asset('public/assets/css-rtl/skin-modes.css')}} rel="stylesheet"> --}}
-
 @section('css')
 
    <!--- Internal Select2 css-->
