@@ -1,10 +1,7 @@
 @extends('layouts.master')
 
-<!-- Title -->
-<title> @yield("title") </title>
-<!-- Favicon -->
-<link rel="icon" href={{asset('public/assets/img/brand/favicon.png')}} type="image/x-icon"/>
-<!-- Icons css -->
+
+{{-- <!-- Icons css -->
 <link href={{asset('public/assets/css/icons.css')}} rel="stylesheet">
 <!--  Custom Scroll bar-->
 <link href={{asset('public/assets/plugins/mscrollbar/jquery.mCustomScrollbar.css')}} rel="stylesheet"/>
@@ -18,7 +15,7 @@
 <!--- Dark-mode css -->
 <link href={{asset('public/assets/css-rtl/style-dark.css')}} rel="stylesheet">
 <!---Skinmodes css-->
-<link href={{asset('public/assets/css-rtl/skin-modes.css')}} rel="stylesheet">
+<link href={{asset('public/assets/css-rtl/skin-modes.css')}} rel="stylesheet"> --}}
 
 @section('css')
 
