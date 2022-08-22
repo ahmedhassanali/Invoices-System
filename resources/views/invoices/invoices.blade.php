@@ -50,6 +50,7 @@
 				@endif
 
 				<div class="row mt-3">
+					
 					<a class=" btn btn-primary col-2 m-2"  href="invoices/create">اضافة فاتورة</a>
 					<a class=" btn btn-primary col-2 m-2"  href="invoices/export">تصدير اكسيل</a>
 				</div>
