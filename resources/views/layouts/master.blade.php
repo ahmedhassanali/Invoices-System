@@ -11,11 +11,11 @@
 	</head>
 
 	<body class="main-body app sidebar-mini">
-		{{-- <!-- Loader -->
+		<!-- Loader -->
 		<div id="global-loader">
 			<img src="{{URL::asset('assets/img/loader.svg')}}" class="loader-img" alt="Loader">
 		</div>
-		<!-- /Loader --> --}}
+		<!-- /Loader -->
 		@include('layouts.main-sidebar')		
 		<!-- main-content -->
 		<div class="main-content app-content">
