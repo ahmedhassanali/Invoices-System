@@ -13,8 +13,8 @@
 	<body class="main-body app sidebar-mini">
 		<!-- Loader -->
 		<div id="global-loader">
-			<img src="{{URL::asset('assets/img/loader.svg')}}" class="loader-img" alt="Loader">
-		</div>
+			{{-- <img src="{{URL::asset('assets/img/loader.svg')}}" class="loader-img" alt="Loader">
+		</div> --}}
 		<!-- /Loader -->
 		@include('layouts.main-sidebar')		
 		<!-- main-content -->
