@@ -65,7 +65,7 @@
             <div class="card">
                 <div class="card-body">
 
-                    <form action="{{ route('invoices.store') }}" method="post" enctype="multipart/form-data"
+                    <form action="invoices/store" method="post" enctype="multipart/form-data"
                     
                         autocomplete="off">
                         @csrf
