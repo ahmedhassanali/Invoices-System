@@ -1,11 +1,11 @@
 @extends('layouts.master2')
 @section('title')
-     login -  Invoices System
+    login - Invoices System
 @stop
 
 @section('css')
     <!-- Sidemenu-respoansive-tabs css -->
-    <link href= "/assets/plugins/sidemenu-responsive-tabs/css/sidemenu-responsive-tabs.css" rel="stylesheet">
+    <link href="/assets/plugins/sidemenu-responsive-tabs/css/sidemenu-responsive-tabs.css" rel="stylesheet">
 @endsection
 
 @section('content')
@@ -20,7 +20,7 @@
                         <div class="row">
                             <div class="col-md-10 col-lg-10 col-xl-9 mx-auto">
                                 <div class="card-sigin">
-                                    <div class="mb-5 d-flex"> 
+                                    <div class="mb-5 d-flex">
                                         <h1 class="main-logo1 ml-1 mr-0 my-auto tx-28">Invoices <span>System</span></h1>
                                     </div>
                                     <div class="card-sigin">

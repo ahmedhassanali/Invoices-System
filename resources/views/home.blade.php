@@ -3,10 +3,11 @@
     لوحة التحكم - برنامج الفواتير
 @stop
 @section('css')
+
     <!--  Owl-carousel css-->
-    <link href="{{'assets/plugins/owl-carousel/owl.carousel.css' }}" rel="stylesheet" />
+    <link href='/assets/plugins/owl-carousel/owl.carousel.css' rel="stylesheet" />
     <!-- Maps css -->
-    <link href="{{'assets/plugins/jqvmap/jqvmap.min.css' }}" rel="stylesheet">
+    <link href='/assets/plugins/jqvmap/jqvmap.min.css' rel="stylesheet">
 
 @endsection
 @section('page-header')
@@ -18,8 +19,8 @@
             </div>
         </div>
         <div class="main-dashboard-header-right">
-        
-        
+
+
         </div>
     </div>
     <!-- /breadcrumb -->
@@ -66,7 +67,8 @@
                                     {{ number_format(\App\Models\invoices::where('value_status', 2)->sum('total'), 2) }}
 
                                 </h3>
-                                <p class="mb-0 tx-12 text-white op-7">{{ \App\Models\invoices::where('value_status', 2)->count() }}
+                                <p class="mb-0 tx-12 text-white op-7">
+                                    {{ \App\Models\invoices::where('value_status', 2)->count() }}
                                 </p>
                             </div>
                             <span class="float-right my-auto mr-auto">
@@ -74,14 +76,13 @@
                                 <span class="text-white op-7">
 
                                     @php
-                                    $count_all= \App\Models\invoices::count();
-                                    $count_invoices2 = \App\Models\invoices::where('value_status', 2)->count();
-                                    if($count_invoices2 == 0){
-                                       echo $count_invoices2 = 0;
-                                    }
-                                    else{
-                                       echo $count_invoices2 = $count_invoices2 / $count_all *100;
-                                    }
+                                        $count_all = \App\Models\invoices::count();
+                                        $count_invoices2 = \App\Models\invoices::where('value_status', 2)->count();
+                                        if ($count_invoices2 == 0) {
+                                            echo $count_invoices2 = 0;
+                                        } else {
+                                            echo $count_invoices2 = ($count_invoices2 / $count_all) * 100;
+                                        }
                                     @endphp
 
                                 </span>
@@ -114,13 +115,12 @@
                                 <i class="fas fa-arrow-circle-up text-white"></i>
                                 <span class="text-white op-7">
                                     @php
-                                        $count_all= \App\Models\invoices::count();
-                                        $count_invoices1 =\App\Models\invoices::where('value_status', 1)->count();
-                                        if($count_invoices1 == 0){
-                                           echo $count_invoices1 = 0;
-                                        }
-                                        else{
-                                           echo $count_invoices1 = $count_invoices1 / $count_all *100;
+                                        $count_all = \App\Models\invoices::count();
+                                        $count_invoices1 = \App\Models\invoices::where('value_status', 1)->count();
+                                        if ($count_invoices1 == 0) {
+                                            echo $count_invoices1 = 0;
+                                        } else {
+                                            echo $count_invoices1 = ($count_invoices1 / $count_all) * 100;
                                         }
                                     @endphp
                                 </span>
@@ -153,13 +153,12 @@
                                 <i class="fas fa-arrow-circle-down text-white"></i>
                                 <span class="text-white op-7">
                                     @php
-                                        $count_all= \App\Models\invoices::count();
+                                        $count_all = \App\Models\invoices::count();
                                         $count_invoices1 = \App\Models\invoices::where('value_status', 1)->count();
-                                        if($count_invoices1 == 0){
+                                        if ($count_invoices1 == 0) {
                                             echo $count_invoices1 = 0;
-                                        }
-                                        else{
-                                          echo $count_invoices1 = $count_invoices1 / $count_all *100;
+                                        } else {
+                                            echo $count_invoices1 = ($count_invoices1 / $count_all) * 100;
                                         }
                                     @endphp
                                 </span>
@@ -208,23 +207,23 @@
 @endsection
 @section('js')
     <!--Internal  Chart.bundle js -->
-    <script src="{{ 'assets/plugins/chart.js/Chart.bundle.min.js'}}"></script>
+    <script src='/assets/plugins/chart.js/Chart.bundle.min.js'></script>
     <!-- Moment js -->
-    <script src="{{ 'assets/plugins/raphael/raphael.min.js'}}"></script>
+    <script src='/assets/plugins/raphael/raphael.min.js'></script>
     <!--Internal  Flot js-->
-    <script src="{{ 'assets/plugins/jquery.flot/jquery.flot.js'}}"></script>
-    <script src="{{ 'assets/plugins/jquery.flot/jquery.flot.pie.js'}}"></script>
-    <script src="{{ 'assets/plugins/jquery.flot/jquery.flot.resize.js'}}"></script>
-    <script src="{{ 'assets/plugins/jquery.flot/jquery.flot.categories.js'}}"></script>
-    <script src="{{ 'assets/js/dashboard.sampledata.js'}}"></script>
-    <script src="{{ 'assets/js/chart.flot.sampledata.js'}}"></script>
+    <script src='/assets/plugins/jquery.flot/jquery.flot.js'></script>
+    <script src='/assets/plugins/jquery.flot/jquery.flot.pie.js'></script>
+    <script src='/assets/plugins/jquery.flot/jquery.flot.resize.js'></script>
+    <script src='/assets/plugins/jquery.flot/jquery.flot.categories.js'></script>
+    <script src='/assets/js/dashboard.sampledata.js'></script>
+    <script src='/assets/js/chart.flot.sampledata.js'></script>
     <!--Internal Apexchart js-->
-    <script src="{{ 'assets/js/apexcharts.js' }}"></script>
+    <script src='/assets/js/apexcharts.js'></script>
     <!-- Internal Map -->
-    <script src="{{ 'assets/plugins/jqvmap/jquery.vmap.min.js' }}"></script>
-    <script src="{{ 'assets/plugins/jqvmap/maps/jquery.vmap.usa.js' }}"></script>
-    <script src="{{ 'assets/js/modal-popup.js' }}"></script>
+    <script src='/assets/plugins/jqvmap/jquery.vmap.min.js'></script>
+    <script src='/assets/plugins/jqvmap/maps/jquery.vmap.usa.js'></script>
+    <script src='/assets/js/modal-popup.js'></script>
     <!--Internal  index js -->
-    <script src="{{ 'assets/js/index.js' }}"></script>
-    <script src="{{ 'assets/js/jquery.vmap.sampledata.js' }}"></script>
+    <script src='/assets/js/index.js'></script>
+    <script src='/assets/js/jquery.vmap.sampledata.js'></script>
 @endsection
