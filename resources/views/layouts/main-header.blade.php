@@ -47,7 +47,7 @@
                 <div class="dropdown nav-item main-header-notification">
                     <a class="new nav-link" href="#">
                         <img src="{{ URL::asset('assets/img/flags/languages.png') }}"
-                        class="logo-1 w-75 h-75" alt="logo"></a>
+                        class="logo-1 header-icon" alt="logo"></a>
                     <div class="dropdown-menu">
                         <div class="menu-header-content bg-primary text-right">
                             @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
@@ -68,7 +68,7 @@
                 <div class="nav-item full-screen fullscreen-button">
                     <a class="new nav-link full-screen-link" href="#">
                         <img src="{{ URL::asset('assets/img/icons/full-screen.png') }}"
-                        class="logo-1  w-50 h-50" alt="logo">
+                        class="logo-1  header-icon  " alt="logo">
                     </a>
                 </div>
 

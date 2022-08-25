@@ -61,7 +61,7 @@
                     <img src="{{ asset('assets/img/icons/3.png') }}" style="width: 30px" class=" mx-2 nav-icon">
                     <span class="side-menu__label">@lang('site.reports')</span><i class="angle fe fe-chevron-down"></i></a>
                 <ul class="slide-menu">
-                    <li><a class="slide-item" href="{{ url('/' . ($page = 'invoice_report')) }}">>@lang('site.invoices_reports')
+                    <li><a class="slide-item" href="{{ url('/' . ($page = 'invoice_report')) }}">@lang('site.invoices_reports')
                         </a>
                     </li>
                 </ul>

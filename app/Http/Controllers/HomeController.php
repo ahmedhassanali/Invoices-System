@@ -47,20 +47,20 @@ class HomeController extends Controller
             ->name('barChartTest')
             ->type('bar')
             ->size(['width' => 350, 'height' => 200])
-            ->labels(['الفواتير الغير المدفوعة', 'الفواتير المدفوعة','الفواتير المدفوعة جزئيا'])
+            ->labels([ 'Unpaid Invoices', 'Paid Invoices','Partially Paid invoices'])
             ->datasets([
                 [
-                    "label" => "الفواتير الغير المدفوعة",
+                    "label" => 'Unpaid Invoices' ,
                     'backgroundColor' => ['#FFB3B3'],
                     'data' => [$nspainvoices2]
                 ],
                 [
-                    "label" => "الفواتير المدفوعة",
+                    "label" => "Paid Invoices",
                     'backgroundColor' => ['#FFDBA4'],
                     'data' => [$nspainvoices1]
                 ],
                 [
-                    "label" => "الفواتير المدفوعة جزئيا",
+                    "label" => "Partially Paid invoices",
                     'backgroundColor' => ['#FFE9AE'],
                     'data' => [$nspainvoices3]
                 ],
@@ -74,7 +74,7 @@ class HomeController extends Controller
             ->name('pieChartTest')
             ->type('pie')
             ->size(['width' => 340, 'height' => 200])
-            ->labels(['الفواتير الغير المدفوعة', 'الفواتير المدفوعة','الفواتير المدفوعة جزئيا'])
+            ->labels(['Unpaid Invoices', 'Paid Invoices ','Partially Paid invoices'])
             ->datasets([
                 [
                     'backgroundColor' => ['#5800FF', '#0096FF','#72FFFF'],
