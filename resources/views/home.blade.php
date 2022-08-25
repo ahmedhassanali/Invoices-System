@@ -178,7 +178,7 @@
        
 
         
-        <div class="col-md-12 col-lg-12 col-xl-7 card">
+        <div class="col-md-12 col-lg-12 col-xl-6 card mx-xl-4">
         
             <div class="card-header bg-transparent pd-b-0 pd-t-20 bd-b-0">
                 <div class="d-flex justify-content-between">

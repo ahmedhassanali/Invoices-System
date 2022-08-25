@@ -22,6 +22,22 @@ return[
      'welcome_back' => 'مرحبا, بك مرة أخرى',
      'invoice_statistics'=>'احصائية الفواتير',
 
+
+    'invoice_num' => 'رقم الفاتورة',
+    'invoice_date' => 'تاريخ الفاتورة',
+    'invoice_due_date' => 'تاريخ الاستحقاق',
+    'total_amount' => 'اجمالي المبلغ',
+    'commission_amount' => 'قيمة العمولة',
+    'discount' => 'الخصم',
+    'VAT_rate' => 'نسبة ضريبة القيمة المضافة',
+    'VAT' => 'قيمة ضريبة القيمة المضافة',
+    'total_with_VAT' => 'اجمالي شامل القيمة المضافة',
+    'notes' => 'ملاحظات',
+    'attachments' => 'مرفقات',
+    'save' => 'حفظ',
+
+
+
      'first_name' => 'الاسم الاول',
      'last_name' => 'الاسم الاخير',
      'email' => 'البريد الالكتروني',

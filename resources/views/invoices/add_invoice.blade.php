@@ -1,10 +1,6 @@
 @extends('layouts.master')
 
-
 @section('css')
-
-   
-
    <!--- Internal Select2 css-->
    <link href='/assets/plugins/select2/css/select2.min.css'  rel="stylesheet">
    <!---Internal Fileupload css-->
@@ -15,13 +11,10 @@
    <link rel="stylesheet" href='/assets/plugins/sumoselect/sumoselect-rtl.css'>
    <!--Internal  TelephoneInput css-->
    <link rel="stylesheet" href='/assets/plugins/telephoneinput/telephoneinput-rtl.css'>
-
-   
 @endsection
 
-
 @section('title')
-    اضافة فاتورة
+    @lang('site.add_invoice')
 @stop
 
 @section('page-header')
@@ -29,8 +22,8 @@
     <div class="breadcrumb-header justify-content-between">
         <div class="my-auto">
             <div class="d-flex">
-                <h4 class="content-title mb-0 my-auto">الفواتير</h4><span class="text-muted mt-1 tx-13 mr-2 mb-0">/
-                    اضافة فاتورة</span>
+                <h4 class="content-title mb-0 my-auto">@lang('site.invoices')</h4>
+                <span class="text-muted mt-1 tx-13 mr-2 mb-0">/@lang('site.add_invoice')</span>
             </div>
         </div>
     </div>
@@ -73,19 +66,19 @@
                         {{-- 1 --}}
                         <div class="row">
                             <div class="col">
-                                <label for="inputName" class="control-label">رقم الفاتورة</label>
+                                <label for="inputName" class="control-label">@lang('site.invoice_num')</label>
                                 <input type="text" class="form-control" id="inputName" name="invoice_number"
-                                    title="يرجي ادخال رقم الفاتورة" required>
+                                    title=" " required>
                             </div>
 
                             <div class="col">
-                                <label>تاريخ الفاتورة</label>
+                                <label>@lang('site.invoice_date')</label>
                                 <input class="form-control fc-datepicker" name="invoice_date" placeholder="YYYY-MM-DD"
                                     type="text" value="{{ date('Y-m-d') }}" required>
                             </div>
 
                             <div class="col">
-                                <label>تاريخ الاستحقاق</label>
+                                <label>@lang('site.invoice_due_date')</label>
                                 <input class="form-control fc-datepicker" name="due_date" placeholder="YYYY-MM-DD"
                                     type="text" required>
                             </div>
@@ -95,11 +88,10 @@
                         {{-- 2 --}}
                         <div class="row">
                             <div class="col">
-                                <label for="inputName" class="control-label">القسم</label>
+                                <label for="inputName" class="control-label">@lang('site.category')</label>
                                 <select name="Section" class="form-control SlectBox" onclick="console.log($(this).val())"
                                     onchange="console.log('change is firing')">
                                     <!--placeholder-->
-                                    <option value="" selected disabled>حدد القسم</option>
                                     @foreach ($sections as $section)
                                         <option value="{{ $section->id }}"> {{ $section->section_name }}</option>
                                     @endforeach
@@ -107,13 +99,13 @@
                             </div>
 
                             <div class="col">
-                                <label for="inputName" class="control-label">المنتج</label>
+                                <label for="inputName" class="control-label">@lang('site.product')</label>
                                 <select id="product" name="product" class="form-control">
                                 </select>
                             </div>
 
                             <div class="col">
-                                <label for="inputName" class="control-label">مبلغ التحصيل</label>
+                                <label for="inputName" class="control-label">@lang('site.total_amount')</label>
                                 <input type="text" class="form-control" id="inputName" name="amount_collection"
                                     oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
                             </div>
@@ -122,26 +114,25 @@
                         {{-- 3 --}}
                         <div class="row">
                             <div class="col">
-                                <label for="inputName" class="control-label">مبلغ العمولة</label>
+                                <label for="inputName" class="control-label">@lang('site.commission_amount')</label>
                                 <input type="text" class="form-control form-control-lg" id="amount_commission"
-                                    name="amount_commission" title="يرجي ادخال مبلغ العمولة "
+                                    name="amount_commission" title=""
                                     oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
                                     required>
                             </div>
 
                             <div class="col">
-                                <label for="inputName" class="control-label">الخصم</label>
+                                <label for="inputName" class="control-label">@lang('site.discount')</label>
                                 <input type="text" class="form-control form-control-lg" id="discount" name="discount"
-                                    title="يرجي ادخال مبلغ الخصم "
+                                    title=""
                                     oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
                                     value=0 required>
                             </div>
 
                             <div class="col">
-                                <label for="inputName" class="control-label">نسبة ضريبة القيمة المضافة</label>
+                                <label for="inputName" class="control-label">@lang('site.VAT_rate')</label></label>
                                 <select name="rate_vat" id="rate_vat" class="form-control" onchange="myFunction()">
                                     <!--placeholder-->
-                                    <option value="" selected disabled>حدد نسبة الضريبة</option>
                                     <option value=" 5%">5%</option>
                                     <option value="10%">10%</option>
                                 </select>
@@ -152,12 +143,12 @@
                         {{-- 4 --}}
                         <div class="row">
                             <div class="col">
-                                <label for="inputName" class="control-label">قيمة ضريبة القيمة المضافة</label>
+                                <label for="inputName" class="control-label">@lang('site.VAT')</label>
                                 <input type="text" class="form-control" id="value_vat" name="value_vat" readonly>
                             </div>
 
                             <div class="col">
-                                <label for="inputName" class="control-label">الاجمالي شامل الضريبة</label>
+                                <label for="inputName" class="control-label">@lang('site.total_with_VAT')</label>
                                 <input type="text" class="form-control" id="total" name="total" readonly>
                             </div>
                         </div>
@@ -165,13 +156,13 @@
                         {{-- 5 --}}
                         <div class="row">
                             <div class="col">
-                                <label for="exampleTextarea">ملاحظات</label>
+                                <label for="exampleTextarea">@lang('site.notes')</label>
                                 <textarea class="form-control" id="exampleTextarea" name="note" rows="3"></textarea>
                             </div>
                         </div><br>
 
                         <p class="text-danger">* صيغة المرفق pdf, jpeg ,.jpg , png </p>
-                        <h5 class="card-title">المرفقات</h5>
+                        <h5 class="card-title">@lang('site.attachments')</h5>
 
                         <div class="col-sm-12 col-md-12">
                             <input type="file" name="pic" class="dropify" accept=".pdf,.jpg, .png, image/jpeg, image/png"
@@ -179,7 +170,7 @@
                         </div><br>
 
                         <div class="d-flex justify-content-center">
-                            <button type="submit" class="btn btn-primary">حفظ البيانات</button>
+                            <button type="submit" class="btn btn-primary">@lang('site.save')</button>
                         </div>
 
                     </form>

@@ -20,6 +20,24 @@ return [
     'welcome_back' => 'Hi, welcome back!',
     'invoice_statistics'=>'Invoice Statistics ',
 
+
+    'invoice_num' => 'Invoice Number',
+    'invoice_date' => 'Invoice Date',
+    'invoice_due_date' => 'Invoice Due Date',
+    'total_amount' => 'Total Amount',
+    'commission_amount' => 'Commission Amount',
+    'discount' => 'discount',
+    'VAT_rate' => 'VAT Rate',
+    'VAT' => 'VAT Amount',
+    'total_with_VAT' => 'Total with VAT',
+    'notes' => 'Notes',
+    'attachments' => 'Attachments',
+    'save' => 'Save',
+    
+
+
+
+
     'add' => 'Add',
     'add_new_category'=>'Add New Category',
     'create' => 'Create',
