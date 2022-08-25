@@ -24,7 +24,7 @@
 					<li class="slide mt-3">
 						<a class="side-menu__item" href="{{ url('/' . $page='home') }}">
 							<img src="{{asset('assets/img/icons/1.png') }}" style="width: 30px" class=" mx-2 nav-icon">
-							<span class="side-menu__label">الرئيسية</span></a>
+							<span class="side-menu__label">@lang('site.dashboard')</span></a>
 					</li>
 
 
