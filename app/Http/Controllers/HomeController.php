@@ -43,39 +43,74 @@ class HomeController extends Controller
         }
 
 
-        $chartjs = app()->chartjs
-            ->name('barChartTest')
-            ->type('bar')
-            ->size(['width' => 350, 'height' => 200])
-            ->labels([ 'Unpaid Invoices', 'Paid Invoices','Partially Paid invoices'])
-            ->datasets([
-                [
-                    "label" => 'Unpaid Invoices' ,
-                    'backgroundColor' => ['#FFB3B3'],
-                    'data' => [$nspainvoices2]
-                ],
-                [
-                    "label" => "Paid Invoices",
-                    'backgroundColor' => ['#FFDBA4'],
-                    'data' => [$nspainvoices1]
-                ],
-                [
-                    "label" => "Partially Paid invoices",
-                    'backgroundColor' => ['#FFE9AE'],
-                    'data' => [$nspainvoices3]
-                ],
+     
 
+            if (app()->getLocale() == 'ar') {
 
-            ])
-            ->options([]);
+                $chartjs = app()->chartjs
+                ->name('barChartTest')
+                ->type('bar')
+                ->size(['width' => 350, 'height' => 200])
+                ->labels([ 'الفواتير الغير مدفوعة', 'الفواتير المدفوعة','الفواتير المدفوعة جزئيا'])
+                ->datasets([
+                    [
+                        "label" => ' الفواتير الغير مدفوعة' ,
+                        'backgroundColor' => ['#FFB3B3'],
+                        'data' => [$nspainvoices2]
+                    ],
+                    [
+                        "label" => "الفواتير المدفوعة",
+                        'backgroundColor' => ['#FFDBA4'],
+                        'data' => [$nspainvoices1]
+                    ],
+                    [
+                        "label" => "الفواتير المدفوعة جزئيا",
+                        'backgroundColor' => ['#FFE9AE'],
+                        'data' => [$nspainvoices3]
+                    ],
+    
+    
+                ])
+                ->options([]);
+    
+            }
+            else
+            {
+                $chartjs = app()->chartjs
+                ->name('barChartTest')
+                ->type('bar')
+                ->size(['width' => 350, 'height' => 200])
+                ->labels([ 'Unpaid Invoices', 'Paid Invoices','Partially Paid invoices'])
+                ->datasets([
+                    [
+                        "label" => 'Unpaid Invoices' ,
+                        'backgroundColor' => ['#FFB3B3'],
+                        'data' => [$nspainvoices2]
+                    ],
+                    [
+                        "label" => "Paid Invoices",
+                        'backgroundColor' => ['#FFDBA4'],
+                        'data' => [$nspainvoices1]
+                    ],
+                    [
+                        "label" => "Partially Paid invoices",
+                        'backgroundColor' => ['#FFE9AE'],
+                        'data' => [$nspainvoices3]
+                    ],
+    
+    
+                ])
+                ->options([]);
+            }
 
-
-        $chartjs_2 = app()->chartjs
-            ->name('pieChartTest')
-            ->type('pie')
-            ->size(['width' => 340, 'height' => 200])
-            ->labels(['Unpaid Invoices', 'Paid Invoices ','Partially Paid invoices'])
-            ->datasets([
+            if (app()->getLocale() == 'ar') 
+            {
+                $chartjs_2 = app()->chartjs
+                ->name('pieChartTest')
+                ->type('pie')
+                ->size(['width' => 340, 'height' => 200])
+                ->labels([ 'الفواتير الغير مدفوعة', 'الفواتير المدفوعة','الفواتير المدفوعة جزئيا'])
+                ->datasets([
                 [
                     'backgroundColor' => ['#5800FF', '#0096FF','#72FFFF'],
                     'data' => [$nspainvoices2, $nspainvoices1,$nspainvoices3]
@@ -83,6 +118,26 @@ class HomeController extends Controller
             ])
             ->options([]);
 
+            }   
+            else 
+            {       
+                $chartjs_2 = app()->chartjs
+                ->name('pieChartTest')
+                ->type('pie')
+                ->size(['width' => 340, 'height' => 200])
+                ->labels(['Unpaid Invoices', 'Paid Invoices ','Partially Paid invoices'])
+                ->datasets([
+                    [
+                        'backgroundColor' => ['#5800FF', '#0096FF','#72FFFF'],
+                        'data' => [$nspainvoices2, $nspainvoices1,$nspainvoices3]
+                    ]
+                ])
+                ->options([]);
+    
+            }
+                
+        
         return view('home', compact('chartjs','chartjs_2'));
     }
 }
+    

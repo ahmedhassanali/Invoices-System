@@ -27,7 +27,7 @@
                 <div class="dropdown nav-item main-header-notification">
                     <a class="new nav-link" href="#">
                         <img src="{{ URL::asset('assets/img/flags/languages.png') }}"
-                        class="logo-1 header-icon" alt="logo"></a>
+                        class="logo-1 " alt="logo"></a>
                     <div class="dropdown-menu">
                         <div class="menu-header-content bg-primary text-right">
                             @foreach (LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
