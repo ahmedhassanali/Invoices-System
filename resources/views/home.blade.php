@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title')
-    لوحة التحكم - برنامج الفواتير
+        @lang('site.invoices_system')
 @stop
 @section('css')
 
@@ -15,7 +15,7 @@
     <div class="breadcrumb-header justify-content-between">
         <div class="left-content">
             <div>
-                <h2 class="main-content-title tx-24 mg-b-1 mg-b-lg-1">Hi, welcome back!</h2>
+                <h2 class="main-content-title tx-24 mg-b-1 mg-b-lg-1">@lang('site.welcome_back')</h2>
             </div>
         </div>
         <div class="main-dashboard-header-right">
@@ -32,7 +32,7 @@
             <div class="card overflow-hidden sales-card bg-primary-gradient">
                 <div class="pl-3 pt-3 pr-3 pb-2 pt-0">
                     <div class="">
-                        <h6 class="mb-3 tx-12 text-white">اجمالي الفواتير</h6>
+                        <h6 class="mb-3 tx-12 text-white"> @lang('site.total_invoices')</h6>
                     </div>
                     <div class="pb-0 mt-0">
                         <div class="d-flex">
@@ -57,7 +57,7 @@
             <div class="card overflow-hidden sales-card bg-danger-gradient">
                 <div class="pl-3 pt-3 pr-3 pb-2 pt-0">
                     <div class="">
-                        <h6 class="mb-3 tx-12 text-white">الفواتير الغير مدفوعة</h6>
+                        <h6 class="mb-3 tx-12 text-white">   @lang('site.unpaid_invoices')</h6>
                     </div>
                     <div class="pb-0 mt-0">
                         <div class="d-flex">
@@ -97,7 +97,7 @@
             <div class="card overflow-hidden sales-card bg-success-gradient">
                 <div class="pl-3 pt-3 pr-3 pb-2 pt-0">
                     <div class="">
-                        <h6 class="mb-3 tx-12 text-white">الفواتير المدفوعة</h6>
+                        <h6 class="mb-3 tx-12 text-white">@lang('site.paid_invoices')</h6>
                     </div>
                     <div class="pb-0 mt-0">
                         <div class="d-flex">
@@ -135,7 +135,7 @@
             <div class="card overflow-hidden sales-card bg-warning-gradient">
                 <div class="pl-3 pt-3 pr-3 pb-2 pt-0">
                     <div class="">
-                        <h6 class="mb-3 tx-12 text-white">الفواتير المدفوعة جزئيا</h6>
+                        <h6 class="mb-3 tx-12 text-white">@lang('site.partially_paid_invoices')</h6>
                     </div>
                     <div class="pb-0 mt-0">
                         <div class="d-flex">
@@ -174,31 +174,34 @@
 
     <!-- row opened -->
     <div class="row row-sm">
+       
         <div class="col-md-12 col-lg-12 col-xl-7">
             <div class="card">
+
                 <div class="card-header bg-transparent pd-b-0 pd-t-20 bd-b-0">
                     <div class="d-flex justify-content-between">
-                        <h4 class="card-title mb-0">نسبة احصائية الفواتير</h4>
+                        <h4 class="card-title mb-0">@lang('site.invoice_statistics')</h4>
                         <i class="mdi mdi-dots-horizontal text-gray"></i>
                     </div>
-
                 </div>
+
                 <div class="card-body" style="width: 70%">
                     {!! $chartjs->render() !!}
-
                 </div>
+
             </div>
         </div>
 
 
         <div class="col-lg-12 col-xl-5">
             <div class="card card-dashboard-map-one">
-                <label class="main-content-label">نسبة احصائية الفواتير</label>
+                <label class="main-content-label"> @lang('site.invoice_statistics') </label>
                 <div class="" style="width: 100%">
                     {!! $chartjs_2->render() !!}
                 </div>
             </div>
         </div>
+
     </div>
     <!-- row closed -->
     </div>
