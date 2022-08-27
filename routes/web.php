@@ -25,12 +25,8 @@ use Illuminate\Support\Facades\URL;
 | contains the "web" middleware group. Now create something great!
 |
 */
-if (env('APP_ENV') === 'production') {
-        URL::forceSchema('https');
-    }
+
 Auth::routes();
-
-
 Route::group(['prefix' => LaravelLocalization::setLocale() , 'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath','auth'] ], function()
 {
 	
