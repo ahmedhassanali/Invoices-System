@@ -165,9 +165,10 @@
 										<h6 class="modal-title">@lang('site.update_product')</h6><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
 									</div>
 									<div class="modal-body">
-									<form action={{route('products.update')}} method="post" >
-										@csrf
+										<form action='products/update' method="post">
+											@csrf
 										{{method_field('patch')}}
+
 
 											<div class="form-group">
 												<input type="hidden" name="product_id" id="product_id" value="">
