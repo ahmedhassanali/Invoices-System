@@ -38,9 +38,12 @@ return[
     'save' => 'حفظ',
     'add_product'=>'اضافة منتج',
     'close'=>'اغلاق',
-
+    'update_category'=>'تعديل القسم',
     'Are_product_deleted' => 'هل انت متاكد من حذف هذا المنتج',
     'Are_category_deleted'=>'هل انت متاكد من حذف هذا القسم',
+    'category_delete'=>'حذف القسم',
+    'product_name'=>'اسم المنتج',
+    'update_product'=>'تعديل المنتج',
      'first_name' => 'الاسم الاول',
      'last_name' => 'الاسم الاخير',
      'email' => 'البريد الالكتروني',

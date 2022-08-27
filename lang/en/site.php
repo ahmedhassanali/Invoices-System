@@ -20,8 +20,9 @@ return [
     'welcome_back' => 'Hi, welcome back!',
     'invoice_statistics'=>'Invoice Statistics ',
     'Are_product_deleted' => 'Are you sure that this product has been deleted?',
-
     'Are_category_deleted'=>'Are you sure that this category has been deleted?',
+    'update_category'=>'Update Category',
+    'category_delete'=>'Category Delete',
 
     'invoice_num' => 'Invoice Number',
     'invoice_date' => 'Invoice Date',
@@ -39,6 +40,7 @@ return [
     'category_name'=>'Category Name',
     'product_name'=>'Product Name',
     'add_product'=>'Add Product',
+    'update_product'=>'Update Product',
 
     'add' => 'Add',
     'add_new_category'=>'Add New Category',

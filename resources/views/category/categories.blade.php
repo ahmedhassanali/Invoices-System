@@ -169,7 +169,7 @@
                             <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
                         </div>
                         <div class="modal-footer">
-                            <button class="btn btn-info" type="submit">@lang('site.category_update')</button>
+                            <button class="btn btn-info" type="submit">@lang('site.update')</button>
                             <button class="btn btn-secondary" data-dismiss="modal" type="button">@lang('site.close')</button>
                         </div>
                     </form>
