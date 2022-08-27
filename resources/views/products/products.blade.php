@@ -119,7 +119,7 @@
 									<div class="modal-header">
 										<h6 class="modal-title">@lang('site.add_product')</h6><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
 									</div>
-									<form action='products/store' method="post">
+									<form action={{'products/store'}} method="post">
 										@csrf
 
 										<div class="modal-body">
