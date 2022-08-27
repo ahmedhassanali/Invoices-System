@@ -166,8 +166,8 @@
 									</div>
 									<div class="modal-body">
 										<form action='products/update' method="post">
-											@csrf
-										{{method_field('patch')}}
+											{{ method_field('patch') }}
+											{{ csrf_field() }}
 
 
 											<div class="form-group">
