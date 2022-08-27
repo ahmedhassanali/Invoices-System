@@ -119,7 +119,7 @@
                     <h6 class="modal-title">@lang('site.add_category')</h6><button aria-label="Close" class="close" data-dismiss="modal"
                         type="button"><span aria-hidden="true">&times;</span></button>
                 </div>
-                <form action="categories/store" method="post">
+                <form action="{{route('categories.store')}}" method="post">
                     @csrf
 
                     <div class="modal-body">
