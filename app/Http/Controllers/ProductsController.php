@@ -51,7 +51,7 @@ class ProductsController extends Controller
         $this->validate($request,[
 
             // 'product_name'=>'required|max:255|unique:products,product_name,'.$id,
-            'product_name' =>['required', Rule::unique('products')->where('categories_id', $request->section_name)],
+            'product_name' =>['required', Rule::unique('products')->where('categories_id',  $section_id)],
 
         ]);
     
