@@ -1,16 +1,16 @@
 @extends('layouts.master')
 
 @section('css')
-   <!--- Internal Select2 css-->
-   <link href='/assets/plugins/select2/css/select2.min.css'  rel="stylesheet">
-   <!---Internal Fileupload css-->
-   <link href='/assets/plugins/fileuploads/css/fileupload.css'  rel="stylesheet" type="text/css" />
-   <!---Internal Fancy uploader css-->
-   <link href='/assets/plugins/fancyuploder/fancy_fileupload.css'  rel="stylesheet" />
-   <!--Internal Sumoselect css-->
-   <link rel="stylesheet" href='/assets/plugins/sumoselect/sumoselect-rtl.css'>
-   <!--Internal  TelephoneInput css-->
-   <link rel="stylesheet" href='/assets/plugins/telephoneinput/telephoneinput-rtl.css'>
+    <!--- Internal Select2 css-->
+    <link href='/assets/plugins/select2/css/select2.min.css' rel="stylesheet">
+    <!---Internal Fileupload css-->
+    <link href='/assets/plugins/fileuploads/css/fileupload.css' rel="stylesheet" type="text/css" />
+    <!---Internal Fancy uploader css-->
+    <link href='/assets/plugins/fancyuploder/fancy_fileupload.css' rel="stylesheet" />
+    <!--Internal Sumoselect css-->
+    <link rel="stylesheet" href='/assets/plugins/sumoselect/sumoselect-rtl.css'>
+    <!--Internal  TelephoneInput css-->
+    <link rel="stylesheet" href='/assets/plugins/telephoneinput/telephoneinput-rtl.css'>
 @endsection
 
 @section('title')
@@ -32,25 +32,25 @@
 
 @section('content')
 
-        @if(session()->has('Add'))
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                <strong class="m-5">{{session()->get('Add')}}</strong>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-        @endif
+    @if (session()->has('Add'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong class="m-5">{{ session()->get('Add') }}</strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    @endif
 
-        @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
-		
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
     <!-- row -->
     <div class="row">
 
@@ -58,11 +58,9 @@
             <div class="card">
                 <div class="card-body">
 
-                    <form action="invoices/store" method="post" enctype="multipart/form-data"
-                    
-                        autocomplete="off">
+                    <form action="invoices/store" method="post" enctype="multipart/form-data" autocomplete="off">
                         @csrf
-                        
+
                         {{-- 1 --}}
                         <div class="row">
                             <div class="col">
@@ -89,7 +87,7 @@
                         <div class="row">
                             <div class="col">
                                 <label for="inputName" class="control-label">@lang('site.category')</label>
-                                <select name="Section" class="form-control SlectBox" onclick="console.log($(this).val())"
+                                <select name="Section" class="form-control " onclick="console.log($(this).val())"
                                     onchange="console.log('change is firing')">
                                     <!--placeholder-->
                                     @foreach ($sections as $section)
@@ -165,8 +163,8 @@
                         <h5 class="card-title">@lang('site.attachments')</h5>
 
                         <div class="col-sm-12 col-md-12">
-                            <input type="file" name="pic" class="dropify" accept=".pdf,.jpg, .png, image/jpeg, image/png"
-                                data-height="70" />
+                            <input type="file" name="pic" class="dropify"
+                                accept=".pdf,.jpg, .png, image/jpeg, image/png" data-height="70" />
                         </div><br>
 
                         <div class="d-flex justify-content-center">
@@ -189,30 +187,30 @@
 @endsection
 
 @section('js')
-     <!-- Internal Select2 js-->
-     <script src='/assets/plugins/select2/js/select2.min.js'></script>
-     <!--Internal Fileuploads js-->
-     <script src='/assets/plugins/fileuploads/js/fileupload.js'></script>
-     <script src='/assets/plugins/fileuploads/js/file-upload.js'></script>
-     <!--Internal Fancy uploader js-->
-     <script src='/assets/plugins/fancyuploder/jquery.ui.widget.js'></script>
-     <script src='/assets/plugins/fancyuploder/jquery.fileupload.js'></script>
-     <script src='/assets/plugins/fancyuploder/jquery.iframe-transport.js'></script>
-     <script src='/assets/plugins/fancyuploder/jquery.fancy-fileupload.js'></script>
-     <script src='/assets/plugins/fancyuploder/fancy-uploader.js'></script>
-     <!--Internal  Form-elements js-->
-     <script src='/assets/js/advanced-form-elements.js'></script>
-     <script src='/assets/js/select2.js'></script>
-     <!--Internal Sumoselect js-->
-     <script src='/assets/plugins/sumoselect/jquery.sumoselect.js'></script>
-     <!--Internal  Datepicker js -->
-     <script src='/assets/plugins/jquery-ui/ui/widgets/datepicker.js'></script>
-     <!--Internal  jquery.maskedinput js -->
-     <script src='/assets/plugins/jquery.maskedinput/jquery.maskedinput.js'></script>
-     <!--Internal  spectrum-colorpicker js -->
-     <script src='/assets/plugins/spectrum-colorpicker/spectrum.js'></script>
-     <!-- Internal form-elements js -->
-     <script src='/assets/js/form-elements.js'></script>
+    <!-- Internal Select2 js-->
+    <script src='/assets/plugins/select2/js/select2.min.js'></script>
+    <!--Internal Fileuploads js-->
+    <script src='/assets/plugins/fileuploads/js/fileupload.js'></script>
+    <script src='/assets/plugins/fileuploads/js/file-upload.js'></script>
+    <!--Internal Fancy uploader js-->
+    <script src='/assets/plugins/fancyuploder/jquery.ui.widget.js'></script>
+    <script src='/assets/plugins/fancyuploder/jquery.fileupload.js'></script>
+    <script src='/assets/plugins/fancyuploder/jquery.iframe-transport.js'></script>
+    <script src='/assets/plugins/fancyuploder/jquery.fancy-fileupload.js'></script>
+    <script src='/assets/plugins/fancyuploder/fancy-uploader.js'></script>
+    <!--Internal  Form-elements js-->
+    <script src='/assets/js/advanced-form-elements.js'></script>
+    <script src='/assets/js/select2.js'></script>
+    <!--Internal Sumoselect js-->
+    <script src='/assets/plugins/sumoselect/jquery.sumoselect.js'></script>
+    <!--Internal  Datepicker js -->
+    <script src='/assets/plugins/jquery-ui/ui/widgets/datepicker.js'></script>
+    <!--Internal  jquery.maskedinput js -->
+    <script src='/assets/plugins/jquery.maskedinput/jquery.maskedinput.js'></script>
+    <!--Internal  spectrum-colorpicker js -->
+    <script src='/assets/plugins/spectrum-colorpicker/spectrum.js'></script>
+    <!-- Internal form-elements js -->
+    <script src='/assets/js/form-elements.js'></script>
 
     <script>
         var date = $('.fc-datepicker').datepicker({
@@ -222,26 +220,26 @@
 
 
     <script>
-        $(document).ready(function(){
-            $('select[name="Section"]').on('change',function(){
-                var section_id =$(this).val();
-                if(section_id){
+        $(document).ready(function() {
+            $('select[name="Section"]').on('change', function() {
+                var section_id = $(this).val();
+                if (section_id) {
                     $.ajax({
-                        url:"{{URL::to('section')}}/"+section_id,
-                        type:"GET",
-                        dataType:"json",
-                        success:function(data){
+                        url: "{{ URL::to('section') }}/" + section_id,
+                        type: "GET",
+                        dataType: "json",
+                        success: function(data) {
                             $('select[name="product"]').empty();
-                            $.each(data,function(key,value){
+                            $.each(data, function(key, value) {
                                 $("select[name='product']").append(
-                                    '<option value="'+ value +'">'+value+'</option>'
+                                    '<option value="' + value + '">' + value +
+                                    '</option>'
                                 );
                             });
                         },
 
                     });
-                }
-                else {
+                } else {
                     console.log('AJAX load did not work');
                 }
             });

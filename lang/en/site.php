@@ -19,6 +19,7 @@ return [
     'users_roles' => 'Users Roles',
     'welcome_back' => 'Hi, welcome back!',
     'invoice_statistics'=>'Invoice Statistics ',
+    'Are_product_deleted' => 'Are you sure that this product has been deleted?',
 
 
     'invoice_num' => 'Invoice Number',
@@ -33,10 +34,10 @@ return [
     'notes' => 'Notes',
     'attachments' => 'Attachments',
     'save' => 'Save',
-    
-
-
-
+    'actions'=>'Actions',
+    'category_name'=>'Category Name',
+    'product_name'=>'Product Name',
+    'add_product'=>'Add Product',
 
     'add' => 'Add',
     'add_new_category'=>'Add New Category',
@@ -49,7 +50,7 @@ return [
     'show' => 'Show',
     'loading' => 'Loading',
     'print' => 'Print',
-
+    'close'=>'close',
     'confirm_delete' => 'Confirm Delete',
     'yes' => 'Yes',
     'no' => 'No',

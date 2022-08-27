@@ -21,8 +21,9 @@ return[
      'products' => 'المنتجات',
      'welcome_back' => 'مرحبا, بك مرة أخرى',
      'invoice_statistics'=>'احصائية الفواتير',
-
-
+     'actions'=>'العمليات',
+     'category_name'=>'اسم القسم',
+     'add_new_category'=>'اضافة قسم جديد',
     'invoice_num' => 'رقم الفاتورة',
     'invoice_date' => 'تاريخ الفاتورة',
     'invoice_due_date' => 'تاريخ الاستحقاق',
@@ -35,8 +36,10 @@ return[
     'notes' => 'ملاحظات',
     'attachments' => 'مرفقات',
     'save' => 'حفظ',
+    'add_product'=>'اضافة منتج',
+    'close'=>'اغلاق',
 
-
+    'Are_product_deleted' => 'هل انت متاكد من حذف هذا المنتج',
 
      'first_name' => 'الاسم الاول',
      'last_name' => 'الاسم الاخير',

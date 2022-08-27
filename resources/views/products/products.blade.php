@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title')
- الاقسام
+	@lang('site.products')
 @endsection
 @section('css')
 <!-- Internal Data table css -->
@@ -16,7 +16,7 @@
 				<div class="breadcrumb-header justify-content-between">
 					<div class="my-auto">
 						<div class="d-flex">
-							<h4 class="content-title mb-0 my-auto">المنتجات</h4>
+							<h4 class="content-title mb-0 my-auto">@lang('site.products')</h4>
 						</div>
 					</div>
 				
@@ -62,7 +62,7 @@
 						<div class="col-xl-12">
 							<div class="card mg-b-20">
 								<div class="card-header pb-0">
-									<a class="modal-effect btn btn-primary btn-block" data-effect="effect-scale" data-toggle="modal" href="#modal_add">اضافة منتج</a>
+									<a class="modal-effect btn btn-primary btn-block" data-effect="effect-scale" data-toggle="modal" href="#modal_add">@lang('site.add_product') </a>
 								</div>
 								
 								<div class="card-body">
@@ -71,10 +71,10 @@
 											<thead>
 												<tr>
 													<th class="border-bottom-0">#</th>
-													<th class="border-bottom-0">اسم المنتج</th>
-													<th class="border-bottom-0">اسم القسم</th>
-													<th class="border-bottom-0">وصف</th>
-													<th class="border-bottom-0">العمليات</th>
+													<th class="border-bottom-0">@lang('site.product_name') </th>
+													<th class="border-bottom-0">@lang('site.category')</th>
+													<th class="border-bottom-0">@lang('site.notes')</th>
+													<th class="border-bottom-0">@lang('site.actions')</th>
 												</tr>
 											</thead>
 											<tbody>
@@ -95,11 +95,11 @@
 														<a class="model-effect btn btn-sm btn-info" data-effect="effect-scale"
 														data-product_id="{{$product->id}}" data-product_name="{{$product->product_name}}" 
 														data-product_description="{{$product->description}}"  data-section_name="{{$product->categories->section_name}}"  data-toggle="modal"
-														href="#modal_edit" title="تعديل"><i class="las la-pen"></i>تعديل</a>
+														href="#modal_edit" title=@lang('site.update')><i class="las la-pen"></i>@lang('site.update')</a>
 
 														<a class="model-effect btn btn-sm btn-danger" data-effect="effect-scale"
 														data-product_id="{{$product->id}}" data-product_name="{{$product->product_name}}"  data-toggle="modal"
-														href="#modal_delete" title="حذف"><i class="las la-trash"></i>حذف</a>
+														href="#modal_delete" title=@lang('site.delete')><i class="las la-trash"></i>@lang('site.delete')</a>
 													
 													</td>
 												</tr>
@@ -117,7 +117,7 @@
 							<div class="modal-dialog" role="document">
 								<div class="modal-content modal-content-demo">
 									<div class="modal-header">
-										<h6 class="modal-title">اضافة قسم</h6><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
+										<h6 class="modal-title">@lang('site.add_product')</h6><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
 									</div>
 									<form action="{{route('products.store')}}" method="post">
 										@csrf
@@ -125,12 +125,12 @@
 										<div class="modal-body">
 
 											<div class="form-group">
-												<label for="">اسم المنتج</label>
+												<label for="">@lang('site.product_name')</label>
 												<input type="text" class="form-control" id="product_name" name="product_name" required>
 											</div>
 
 											<div class="form-group">
-												<label for="">اسم القسم</label>
+												<label for="">@lang('site.category_name')</label>
 												<select  class="form-control" id="section_name" name="section_name" required> 
 													<option>
 														@foreach ($sections as $section)
@@ -141,15 +141,15 @@
 											</div>
 
 											<div class="form-group">
-												<label for="">ملاحظات</label>
+												<label for="">@lang('site.notes')</label>
 												<textarea class="form-control" id="description" name="description" rows="3"  ></textarea>
 											</div>
 											
 										</div>
 
 										<div class="modal-footer">
-											<button class="btn btn-success" type="submit">حفظ المنتج</button>
-											<button class="btn btn-secondary" data-dismiss="modal" type="button">اغلاق</button>
+											<button class="btn btn-success" type="submit">@lang('site.save')</button>
+											<button class="btn btn-secondary" data-dismiss="modal" type="button">@lang('site.close')</button>
 										</div>
 									</form>
 								</div>
@@ -162,7 +162,7 @@
 							<div class="modal-dialog" role="document">
 								<div class="modal-content modal-content-demo">
 									<div class="modal-header">
-										<h6 class="modal-title">تعديل المنتج</h6><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
+										<h6 class="modal-title">@lang('site.update_product')</h6><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
 									</div>
 									<div class="modal-body">
 									<form action="products/update" method="post" >
@@ -172,12 +172,12 @@
 
 											<div class="form-group">
 												<input type="hidden" name="product_id" id="product_id" value="">
-												<label for="">اسم المنتج</label>
+												<label for="">@lang('site.product_name')</label>
 												<input type="text" class="form-control" id="product_name" name="product_name" required>
 											</div>
 
 											<div class="form-group">
-												<label for="">اسم القسم</label>
+												<label for="">@lang('site.category_name')</label>
 												<select  class="form-control custom-select " id="section_name" name="section_name" required > 
 													<option>
 														@foreach ($sections as $section)
@@ -188,14 +188,14 @@
 											</div>
 
 											<div class="form-group">
-												<label for="">ملاحظات</label>
+												<label for="">@lang('site.notes')</label>
 												<textarea class="form-control" id="description" name="description" rows="3"  ></textarea>
 											</div>
 											
 											
 											<div class="modal-footer">
-												<button class="btn btn-info" type="submit">تعديل القسم</button>
-												<button class="btn btn-secondary" data-dismiss="modal" type="button">اغلاق</button>
+												<button class="btn btn-info" type="submit">@lang('site.update_product')</button>
+												<button class="btn btn-secondary" data-dismiss="modal" type="button">@lang('site.close')</button>
 											</div>
 										</form>
 									</div>
@@ -209,7 +209,7 @@
 							<div class="modal-dialog" role="document">
 								<div class="modal-content modal-content-demo">
 									<div class="modal-header">
-										<h6 class="modal-title">حذف المنتج</h6><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
+										<h6 class="modal-title">@lang('site.delete_product')</h6><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
 									</div>
 									<div class="modal-body">
 									<form action="products/destroy" method="post" >
@@ -217,13 +217,13 @@
 										{{method_field('delete')}}
 											<div class="form-group">
 												<input type="hidden" name="product_id" id="product_id" value="">
-												<label for="">هل انت متاكد من حذف هذا المنتج</label>
+												<label for="">@lang('site.Are_product_deleted')</label>
 												<input type="text" class="form-control" id="product_name" name="product_name">
 											</div>
 											
 											<div class="modal-footer">
-												<button class="btn btn-info" type="submit">حذف المتتج</button>
-												<button class="btn btn-secondary" data-dismiss="modal" type="button">اغلاق</button>
+												<button class="btn btn-info" type="submit">@lang('site.delete')</button>
+												<button class="btn btn-secondary" data-dismiss="modal" type="button">@lang('site.close')</button>
 											</div>
 										</form>
 									</div>
