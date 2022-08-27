@@ -40,7 +40,7 @@ return[
     'close'=>'اغلاق',
 
     'Are_product_deleted' => 'هل انت متاكد من حذف هذا المنتج',
-
+    'Are_category_deleted'=>'هل انت متاكد من حذف هذا القسم',
      'first_name' => 'الاسم الاول',
      'last_name' => 'الاسم الاخير',
      'email' => 'البريد الالكتروني',

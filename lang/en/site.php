@@ -21,6 +21,7 @@ return [
     'invoice_statistics'=>'Invoice Statistics ',
     'Are_product_deleted' => 'Are you sure that this product has been deleted?',
 
+    'Are_category_deleted'=>'Are you sure that this category has been deleted?',
 
     'invoice_num' => 'Invoice Number',
     'invoice_date' => 'Invoice Date',

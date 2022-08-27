@@ -116,28 +116,28 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content modal-content-demo">
                 <div class="modal-header">
-                    <h6 class="modal-title">اضافة قسم</h6><button aria-label="Close" class="close" data-dismiss="modal"
+                    <h6 class="modal-title">@lang('site.add_category')</h6><button aria-label="Close" class="close" data-dismiss="modal"
                         type="button"><span aria-hidden="true">&times;</span></button>
                 </div>
-                <form action="{{ route('categories.store') }}" method="post">
+                <form action="categories/store" method="post">
                     @csrf
 
                     <div class="modal-body">
 
                         <div class="form-group">
-                            <label for="">اسم القسم</label>
+                            <label for="">@lang('site.category_name')</label>
                             <input type="text" class="form-control" id="section_name" name="section_name" required>
                         </div>
                         <div class="form-group">
-                            <label for="">ملاحظات</label>
+                            <label for="">@lang('site.notes')</label>
                             <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
                         </div>
 
                     </div>
 
                     <div class="modal-footer">
-                        <button class="btn btn-success" type="submit">حفظ القسم</button>
-                        <button class="btn btn-secondary" data-dismiss="modal" type="button">اغلاق</button>
+                        <button class="btn btn-success" type="submit">@lang('site.save')</button>
+                        <button class="btn btn-secondary" data-dismiss="modal" type="button">@lang('site.close')</button>
                     </div>
                 </form>
             </div>
@@ -150,7 +150,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content modal-content-demo">
                 <div class="modal-header">
-                    <h6 class="modal-title">تعديل قسم</h6><button aria-label="Close" class="close" data-dismiss="modal"
+                    <h6 class="modal-title">@lang('site.update_category')</h6><button aria-label="Close" class="close" data-dismiss="modal"
                         type="button"><span aria-hidden="true">&times;</span></button>
                 </div>
                 <div class="modal-body">
@@ -161,16 +161,16 @@
 
                         <div class="form-group">
                             <input type="hidden" name="section_id" id="section_id" value="">
-                            <label for="">اسم القسم</label>
+                            <label for="">@lang('site.category_name')</label>
                             <input type="text" class="form-control" id="section_name" name="section_name" required>
                         </div>
                         <div class="form-group">
-                            <label for="">ملاحظات</label>
+                            <label for="">@lang('site.notes')</label>
                             <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
                         </div>
                         <div class="modal-footer">
-                            <button class="btn btn-info" type="submit">تعديل القسم</button>
-                            <button class="btn btn-secondary" data-dismiss="modal" type="button">اغلاق</button>
+                            <button class="btn btn-info" type="submit">@lang('site.category_update')</button>
+                            <button class="btn btn-secondary" data-dismiss="modal" type="button">@lang('site.close')</button>
                         </div>
                     </form>
                 </div>
@@ -184,7 +184,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content modal-content-demo">
                 <div class="modal-header">
-                    <h6 class="modal-title">حذف قسم</h6><button aria-label="Close" class="close" data-dismiss="modal"
+                    <h6 class="modal-title">@lang('site.category_delete')</h6><button aria-label="Close" class="close" data-dismiss="modal"
                         type="button"><span aria-hidden="true">&times;</span></button>
                 </div>
                 <div class="modal-body">
@@ -193,13 +193,13 @@
                         {{ method_field('delete') }}
                         <div class="form-group">
                             <input type="hidden" name="section_id" id="section_id" value="">
-                            <label for="">هل انت متاكد من حذف هذا القسم</label>
+                            <label for="">@lang('site.Are_category_deleted')</label>
                             <input type="text" class="form-control" id="section_name" name="section_name">
                         </div>
 
                         <div class="modal-footer">
-                            <button class="btn btn-danger" type="submit">حذف القسم</button>
-                            <button class="btn btn-secondary" data-dismiss="modal" type="button">اغلاق</button>
+                            <button class="btn btn-danger" type="submit">@lang('site.delete')</button>
+                            <button class="btn btn-secondary" data-dismiss="modal" type="button">@lang('site.close')</button>
                         </div>
                     </form>
                 </div>
