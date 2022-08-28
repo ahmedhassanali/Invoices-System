@@ -26,7 +26,7 @@ return [
     'roles'=>'Roles',
     'role_name'=>'Role Name',
     'add_role'=>'Add Role',
-    'view_role'=>'View Role'
+    'view_role'=>'View Role',
 
 
     'invoice_num' => 'Invoice Number',
