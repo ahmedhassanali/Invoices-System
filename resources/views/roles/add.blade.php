@@ -5,7 +5,7 @@
 <!--Internal  treeview -->
 <link href="{{URL::asset('assets/plugins/treeview/treeview-rtl.css')}}" rel="stylesheet" type="text/css" />
 @section('title')
-اضافة الصلاحيات - مورا سوفت للادارة القانونية
+@lang('site.add_role')
 @stop
 
 @endsection
@@ -14,8 +14,7 @@
 <div class="breadcrumb-header justify-content-between">
     <div class="my-auto">
         <div class="d-flex">
-            <h4 class="content-title mb-0 my-auto">الصلاحيات</h4><span class="text-muted mt-1 tx-13 mr-2 mb-0">/ اضافة
-                نوع مستخدم</span>
+            <h4 class="content-title mb-0 my-auto">@lang('site.roles')</h4><span class="text-muted mt-1 tx-13 mr-2 mb-0">/@lang('site.add_role')</span>
         </div>
     </div>
 </div>
@@ -29,7 +28,7 @@
     <button aria-label="Close" class="close" data-dismiss="alert" type="button">
         <span aria-hidden="true">&times;</span>
     </button>
-    <strong>خطا</strong>
+    <strong>@lang('site.error')</strong>
     <ul>
         @foreach ($errors->all() as $error)
         <li>{{ $error }}</li>
@@ -50,7 +49,7 @@
                 <div class="main-content-label mg-b-5">
                     <div class="col-xs-7 col-sm-7 col-md-7">
                         <div class="form-group">
-                            <p>اسم الصلاحية :</p>
+                            <p>@lang('site.role_name')</p>
                             {!! Form::text('name', null, array('class' => 'form-control')) !!}
                         </div>
                     </div>
@@ -59,7 +58,7 @@
                     <!-- col -->
                     <div class="col-lg-4">
                         <ul id="treeview1">
-                            <li><a href="#">الصلاحيات</a>
+                            <li><a href="#">@lang('site.roles')</a>
                                 <ul>
                             </li>
                             @foreach($permission as $value)
@@ -76,7 +75,7 @@
                     </div>
                     <!-- /col -->
                     <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                        <button type="submit" class="btn btn-main-primary">تاكيد</button>
+                        <button type="submit" class="btn btn-main-primary">@lang('site.save')</button>
                     </div>
 
                 </div>

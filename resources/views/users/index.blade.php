@@ -2,7 +2,7 @@
 @section('css')
 
 @section('title')
-    المستخدمين - مورا سوفت للادارة الفواتير
+        @lang('site.users')
 @stop
 
 <!-- Internal Data table css -->
@@ -21,8 +21,7 @@
 <div class="breadcrumb-header justify-content-between">
     <div class="my-auto">
         <div class="d-flex">
-            <h4 class="content-title mb-0 my-auto">المستخدمين</h4><span class="text-muted mt-1 tx-13 mr-2 mb-0">/ قائمة
-                المستخدمين</span>
+            <h4 class="content-title mb-0 my-auto">@lang('site.users')</h4><span class="text-muted mt-1 tx-13 mr-2 mb-0">/@lang('site.users_list')</span>
         </div>
     </div>
 </div>
@@ -44,7 +43,7 @@
             <div class="card-header pb-0">
                 <div class="col-12">
                     @can('اضافة مستخدم')
-                        <a class="btn btn-primary col-12" href="{{ route('users.create') }}">اضافة مستخدم</a>
+                        <a class="btn btn-primary col-12" href="{{ route('users.create') }}">@lang('site.add_user')</a>
                     @endcan
                 </div>
             </div>
@@ -54,11 +53,11 @@
                         <thead>
                             <tr>
                                 <th class="wd-10p border-bottom-0">#</th>
-                                <th class="wd-15p border-bottom-0">اسم المستخدم</th>
-                                <th class="wd-20p border-bottom-0">البريد الالكتروني</th>
-                                <th class="wd-15p border-bottom-0">حالة المستخدم</th>
-                                <th class="wd-15p border-bottom-0">نوع المستخدم</th>
-                                <th class="wd-10p border-bottom-0">العمليات</th>
+                                <th class="wd-15p border-bottom-0">@lang('site.user_name')</th>
+                                <th class="wd-20p border-bottom-0">@lang('site.email')</th>
+                                <th class="wd-15p border-bottom-0">@lang('site.user_status')</th>
+                                <th class="wd-15p border-bottom-0">@lang('site.user_role')</th>
+                                <th class="wd-10p border-bottom-0">@lang('site.actions')</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -70,7 +69,7 @@
                                     <td>{{ $user->name }}</td>
                                     <td>{{ $user->email }}</td>
                                     <td>
-                                        @if ($user->Status == 'مفعل')
+                                        @if ($user->Status == 'valid')
                                             <span class="label text-success d-flex">
                                                 <div class="dot-label bg-success ml-1"></div>{{ $user->status }}
                                             </span>
@@ -92,14 +91,14 @@
                                     <td>
                                         @can('تعديل مستخدم')
                                             <a href="{{ route('users.edit', $user->id) }}" class="btn btn-sm btn-info"
-                                                title="تعديل"><i class="las la-pen"></i>تعديل</a>
+                                                title="تعديل"><i class="las la-pen"></i>@lang('site.update')</a>
                                         @endcan
 
                                         @can('حذف مستخدم')
                                             <a class="modal-effect btn btn-sm btn-danger" data-effect="effect-scale"
                                                 data-user_id="{{ $user->id }}" data-username="{{ $user->name }}"
                                                 data-toggle="modal" href="#modaldemo8" title="حذف"><i
-                                                    class="las la-trash"></i>حذف</a>
+                                                    class="las la-trash"></i>@lang('site.delete')</a>
                                         @endcan
                                     </td>
                                 </tr>
@@ -117,20 +116,20 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content modal-content-demo">
                 <div class="modal-header">
-                    <h6 class="modal-title">حذف المستخدم</h6><button aria-label="Close" class="close"
+                    <h6 class="modal-title">@lang('site.delete_user')</h6><button aria-label="Close" class="close"
                         data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
                 </div>
-                <form action="{{ route('users.destroy', 'test') }}" method="post">
+                <form action="{{ route('users.destroy', $role->id ) }}" method="post">
                     {{ method_field('delete') }}
                     {{ csrf_field() }}
                     <div class="modal-body">
-                        <p>هل انت متاكد من عملية الحذف ؟</p><br>
+                        <p>@lang('site.Are_user_deleted')</p><br>
                         <input type="hidden" name="user_id" id="user_id" value="">
                         <input class="form-control" name="username" id="username" type="text" readonly>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">الغاء</button>
-                        <button type="submit" class="btn btn-danger">تاكيد</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">@lang('site.cansel')</button>
+                        <button type="submit" class="btn btn-danger">@lang('site.sure')</button>
                     </div>
             </div>
             </form>

@@ -23,6 +23,11 @@ return [
     'Are_category_deleted'=>'Are you sure that this category has been deleted?',
     'update_category'=>'Update Category',
     'category_delete'=>'Category Delete',
+    'roles'=>'Roles',
+    'role_name'=>'Role Name',
+    'add_role'=>'Add Role',
+    'view_role'=>'View Role'
+
 
     'invoice_num' => 'Invoice Number',
     'invoice_date' => 'Invoice Date',
@@ -41,7 +46,15 @@ return [
     'product_name'=>'Product Name',
     'add_product'=>'Add Product',
     'update_product'=>'Update Product',
-
+    'delete_product'=>'Delete Product',
+    'user_name'=>'User Name',
+    'user_status'=>'User Status',
+    'user_role'=>'User Role',
+    'add_user'=>'Add User',
+    'delete_user'=>'Delete User',
+    'Are_user_deleted'=>'Are you sure that this user has been deleted?',
+    'sure'=>'sure',
+    'cansel'=>'cansel',
     'add' => 'Add',
     'add_new_category'=>'Add New Category',
     'create' => 'Create',
@@ -57,11 +70,11 @@ return [
     'confirm_delete' => 'Confirm Delete',
     'yes' => 'Yes',
     'no' => 'No',
-
+    'back'=>'back',
     'login' => 'Login',
     'remember_me' => 'Remember Me',
     'password' => 'Password',
-    'password_confirmation' => 'Password Confirmation',
+    'confirm_password' => 'Password Confirmation',
 
     'added_successfully' => 'Added Successfully',
     'updated_successfully' => 'Updated Successfully',

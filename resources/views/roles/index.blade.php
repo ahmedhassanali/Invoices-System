@@ -3,7 +3,7 @@
     <!--Internal   Notify -->
     <link href="{{ URL::asset('assets/plugins/notify/css/notifIt.css') }}" rel="stylesheet" />
 @section('title')
-    صلاحيات المستخدمين - مورا سوفت للادارة القانونية
+    @lang('site.roles')
 @stop
 
 
@@ -13,8 +13,7 @@
 <div class="breadcrumb-header justify-content-between">
     <div class="my-auto">
         <div class="d-flex">
-            <h4 class="content-title mb-0 my-auto">المستخدمين</h4><span class="text-muted mt-1 tx-13 mr-2 mb-0"> /
-                صلاحيات المستخدمين</span>
+            <h4 class="content-title mb-0 my-auto">@lang('site.users')</h4> <span class="text-muted mt-1 tx-13 mr-2 mb-0"> /@lang('site.roles') </span>
         </div>
     </div>
 </div>
@@ -27,11 +26,10 @@
     <script>
         window.onload = function() {
             notif({
-                msg: " تم اضافة الصلاحية بنجاح",
+                msg: @lang('site.added_successfully'),
                 type: "success"
             });
         }
-
     </script>
 @endif
 
@@ -39,11 +37,10 @@
     <script>
         window.onload = function() {
             notif({
-                msg: " تم تحديث بيانات الصلاحية بنجاح",
+                msg: @lang('site.updated_successfully'),
                 type: "success"
             });
         }
-
     </script>
 @endif
 
@@ -51,11 +48,10 @@
     <script>
         window.onload = function() {
             notif({
-                msg: " تم حذف الصلاحية بنجاح",
+                msg: @lang('site.deleted_successfully'),
                 type: "error"
             });
         }
-
     </script>
 @endif
 
@@ -68,7 +64,8 @@
                     <div class="col-lg-12 margin-tb">
                         <div class="pull-right">
                             @can('اضافة صلاحية')
-                                <a class="btn btn-primary btn-sm" href="{{ route('roles.create') }}">اضافة</a>
+                                <a class="btn btn-primary btn-sm"
+                                    href="{{ route('roles.create') }}">@lang('site.add')</a>
                             @endcan
                         </div>
                     </div>
@@ -82,8 +79,8 @@
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>الاسم</th>
-                                <th>العمليات</th>
+                                <th>@lang('site.role_name')</th>
+                                <th>@lang('site.actions')</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -94,20 +91,21 @@
                                     <td>
                                         @can('عرض صلاحية')
                                             <a class="btn btn-success btn-sm"
-                                                href="{{ route('roles.show', $role->id) }}">عرض</a>
+                                                href="{{ route('roles.show', $role->id) }}">@lang('site.show')</a>
                                         @endcan
-                                        
+
                                         @can('تعديل صلاحية')
                                             <a class="btn btn-primary btn-sm"
-                                                href="{{ route('roles.edit', $role->id) }}">تعديل</a>
+                                                href="{{ route('roles.edit', $role->id) }}">@lang('site.update')</a>
                                         @endcan
 
                                         @if ($role->name !== 'owner')
                                             @can('حذف صلاحية')
-                                                {!! Form::open(['method' => 'DELETE', 'route' => ['roles.destroy',
-                                                $role->id], 'style' => 'display:inline']) !!}
-                                                {!! Form::submit('حذف', ['class' => 'btn btn-danger btn-sm']) !!}
-                                                {!! Form::close() !!}
+
+                                            <a class="modal-effect btn btn-sm btn-danger" data-effect="effect-scale"
+                                                data-role_id="{{ $role->id }}"
+                                                data-toggle="modal" href="#modaldemo8" title="حذف"><i
+                                                class="las la-trash"></i>@lang('site.delete')</a>
                                             @endcan
                                         @endif
 
@@ -118,6 +116,31 @@
                         </tbody>
                     </table>
                 </div>
+            </div>
+        </div>
+
+
+        <div class="modal" id="modaldemo8">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content modal-content-demo">
+                    <div class="modal-header">
+                        <h6 class="modal-title">@lang('site.delete_role')</h6><button aria-label="Close" class="close"
+                            data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <form action="{{ route('roles.destroy', 'test') }}" method="post">
+                        {{ method_field('delete') }}
+                        {{ csrf_field() }}
+                        <div class="modal-body">
+                            <p>@lang('site.Are_role_deleted')</p><br>
+                            <input type="hidden" name="role_id" id="role_id" value="">
+                            <input class="form-control" name="role_name" id="role_name" type="text" readonly>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">@lang('site.cansel')</button>
+                            <button type="submit" class="btn btn-danger">@lang('site.sure')</button>
+                        </div>
+                </div>
+                </form>
             </div>
         </div>
     </div>
