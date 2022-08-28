@@ -225,7 +225,7 @@
                 var section_id = $(this).val();
                 if (section_id) {
                     $.ajax({
-                        url: {{url('/section/' + section_id)}},
+                        url: {{url('/section/' )}}+section_id,
                         type: "GET",
                         dataType: "json",
                         success: function(data) {
