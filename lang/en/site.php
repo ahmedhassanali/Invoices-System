@@ -34,7 +34,7 @@ return [
     'Are_invoice_archive' => 'Are you sure that this invoice has been archived?',
     'Are_cancel_invoice_archive' => 'Are you sure that this invoice has been cancel archived?',
     'Are_atta_deleted' => 'Are you sure that this attachment has been deleted?',
-
+    'export_excel'=>'Export Excel',
     'invoice_num' => 'Invoice Number',
     'invoice_date' => 'Invoice Date',
     'invoice_due_date' => 'Invoice Due Date',
@@ -95,6 +95,23 @@ return [
     'print_invoice'=>'Print Invoice',
     'invoice_report'=>'Invoice Report',
     'archive'=>'archive',
+
+
+    'collection_invoice'=>'Collection Invoice',
+    'invoice_information'=>'Invoice Information',
+    'collection_amount'=>'collection_amount',
+    'print'=>'print',
+    'invoice_details'=>'invoice_details',
+    'invoice_status'=>'archive',
+    'add_attachment'=>'add_attachment',
+    'file_name'=>'archive',
+    'user_add'=>'archive',
+    'add_date'=>'archive',
+    'invoice_attachments'=>'archive',
+    'archive'=>'archive',
+
+
+
 
 
 

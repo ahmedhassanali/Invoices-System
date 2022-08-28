@@ -43,6 +43,7 @@ return [
     'Are_product_deleted' => 'هل انت متاكد من حذف هذا المنتج',
     'Are_invoice_deleted' => 'هل انت متاكد من حذف هذه الفاتورة',
     'Are_atta_deleted' => 'هل انت متاكد من حذف هذه المرفق',
+    'export_excel'=>'تصدير الاكسل',
 
     'Are_invoice_archive' => 'هل انت متاكد من ارشفت هذه الفاتورة',
     'Are_cancel_invoice_archive' => 'هل انت متاكد من  الغاء ارشفت هذه الفاتورة',

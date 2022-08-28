@@ -57,7 +57,7 @@
                         <li class=""><a href="#tab11" class="active" data-toggle="tab"><i class="fa fa-laptop"></i>
                                 @lang('site.invoice_details')</a></li>
                         <li><a href="#tab12" data-toggle="tab"><i class="fa fa-cube"></i> @lang('site.invoice_status')</a></li>
-                        <li><a href="#tab13" data-toggle="tab"><i class="fa fa-cogs"></i> @lang('site.invoices_attachments')</a></li>
+                        <li><a href="#tab13" data-toggle="tab"><i class="fa fa-cogs"></i> @lang('site.invoice_attachments')</a></li>
                     </ul>
                 </div>
             </div>
@@ -67,11 +67,11 @@
                         <table class="table table-striped" style="text-align: center">
                             <tbody>
                                 <tr>
-                                    <th scope="row">@lang('site.invoices_number')</th>
+                                    <th scope="row">@lang('site.invoice_number')</th>
                                     <td>{{ $invoice->invoice_number }}</td>
                                     <th scope="row">@lang('site.invoice_date')</th>
                                     <td>{{ $invoice->invoice_date }}</td>
-                                    <th scope="row">@lang('site.invoices_due_date')</th>
+                                    <th scope="row">@lang('site.invoice_due_date')</th>
                                     <td>{{ $invoice->due_date }}</td>
                                     <th scope="row">@lang('site.category')</th>
                                     <td>{{ $invoice->categories->section_name }}</td>

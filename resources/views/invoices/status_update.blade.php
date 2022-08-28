@@ -10,7 +10,7 @@
         <div class="my-auto">
             <div class="d-flex">
                 <h4 class="content-title mb-0 my-auto">@lang('site.invoices')</h4><span class="text-muted mt-1 tx-13 mr-2 mb-0">/
-                    @lang('site.invoices_status')</span>
+                    @lang('site.invoice_status')</span>
             </div>
         </div>
 
@@ -28,20 +28,20 @@
                         {{-- 1 --}}
                         <div class="row">
                             <div class="col">
-                                <label for="inputName" class="control-label">@lang('site.invoices_number')</label>
+                                <label for="inputName" class="control-label">@lang('site.invoice_number')</label>
                                 <input type="hidden" name="invoice_id" value="{{ $invoices->id }}">
                                 <input type="text" class="form-control" id="inputName" name="invoice_number"
                                     title="" value="{{ $invoices->invoice_number }}" required readonly>
                             </div>
 
                             <div class="col">
-                                <label>@lang('site.invoices_date')</label>
+                                <label>@lang('site.invoice_date')</label>
                                 <input class="form-control fc-datepicker" name="invoice_Date" placeholder="YYYY-MM-DD"
                                     type="text" value="{{ $invoices->invoice_date }}" required readonly>
                             </div>
 
                             <div class="col">
-                                <label>@lang('site.invoices_due_date')</label>
+                                <label>@lang('site.invoice_due_date')</label>
                                 <input class="form-control fc-datepicker" name="Due_date" placeholder="YYYY-MM-DD"
                                     type="text" value="{{ $invoices->due_date }}" required readonly>
                             </div>

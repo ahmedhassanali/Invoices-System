@@ -188,7 +188,7 @@
 											
 											<div class="modal-footer">
 												<button class="btn btn-info" type="submit"> @lang('site.sure')</button>
-												<button class="btn btn-danger" data-dismiss="modal" type="button">اغلاق@lang('site.close')</button>
+												<button class="btn btn-danger" data-dismiss="modal" type="button">@lang('site.close')</button>
 											</div>
 										</form>
 									</div>

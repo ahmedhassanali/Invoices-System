@@ -32,7 +32,7 @@
                 <div class="card card-invoice">
                     <div class="card-body">
                         <div class="invoice-header">
-                            <h1 class="invoice-title">@lang('site.collection invoice')</h1>
+                            <h1 class="invoice-title">@lang('site.collection_invoice')</h1>
                             <div class="billed-from">
                                 <h6>BootstrapDash, Inc.</h6>
                                 <p>201 Something St., Something Town, YT 242, Country 6546<br>
@@ -52,7 +52,7 @@
                             </div>
                             <div class="col-md">
                                 <label class="tx-gray-600">@lang('site.invoice_information')</label>
-                                <p class="invoice-info-row"><span>@lang('site.invoices_number')</span>
+                                <p class="invoice-info-row"><span>@lang('site.invoice_number')</span>
                                     <span>{{ $invoices->invoice_number }}</span></p>
                                 <p class="invoice-info-row"><span> @lang('site.invoice_date')</span>
                                     <span>{{ $invoices->invoice_date }}</span></p>
@@ -68,7 +68,7 @@
                                     <tr>
                                         <th class="wd-20p">#</th>
                                         <th class="wd-40p">@lang('site.product')</th>
-                                        <th class="tx-center"> @lang('site.collection amount')</th>
+                                        <th class="tx-center"> @lang('site.collection_amount')</th>
                                         <th class="tx-right">@lang('site.commission_amount')</th>
                                         <th class="tx-right">@lang('site.total')</th>
                                     </tr>

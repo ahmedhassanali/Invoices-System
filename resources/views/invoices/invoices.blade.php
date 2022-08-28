@@ -51,8 +51,8 @@
 
     <div class="row mt-3">
 
-        <a class=" btn btn-primary col-2 m-2" href="invoices/create">@lang('site.add_invoices')</a>
-        <a class=" btn btn-primary col-2 m-2" href="invoices/export">@lang('site.Export Excel')</a>
+        <a class=" btn btn-primary col-2 m-2" href="invoices/create">@lang('site.add_invoice')</a>
+        <a class=" btn btn-primary col-2 m-2" href="invoices/export">@lang('site.export_excel')</a>
     </div>
     <!-- row -->
     <div class="row">
