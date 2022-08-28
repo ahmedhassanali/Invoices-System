@@ -15,6 +15,24 @@ return [
     'reports' => 'التقارير',
     'invoices_reports' => 'تقارير الفواتير',
     'users' => 'المستخدمين',
+    'user' => 'المستخدم',
+
+
+    'collection_invoice'=>'فاتورت صارف',
+    'invoice_information'=>'معلومات الفاتورة',
+    'collection_amount'=>'مبلغ التحصيل',
+    'print'=>'طباعة',
+    'invoice_details'=>'تفاصيل الفاتورة ',
+    'invoice_status'=>'حاله الفاتورة',
+    'add_attachment'=>'اضافة مرفق',
+    'file_name'=>'اسم الملف',
+    'user_add'=>'من قبل المستخدم',
+    'add_date'=>'تاريخ الاضافة',
+    'invoice_attachments'=>'مرفقات الفاتورة',
+    'archive'=>'الارشيف',
+
+
+
     'users_list' => 'قائمة المستخدمين ',
     'users_roles' => 'صلاحيات المستخدمين',
     'categories' => 'الاقسام',

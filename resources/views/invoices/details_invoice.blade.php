@@ -110,7 +110,7 @@
                                 </tr>
 
                                 <tr>
-                                    <th scope="row">ملاحظات@lang('site.invoices')</th>
+                                    <th scope="row">@lang('site.notes')</th>
                                     <td>{{ $invoice->note }}</td>
                                 </tr>
                             </tbody>

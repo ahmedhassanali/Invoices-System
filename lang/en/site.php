@@ -99,17 +99,17 @@ return [
 
     'collection_invoice'=>'Collection Invoice',
     'invoice_information'=>'Invoice Information',
-    'collection_amount'=>'collection_amount',
-    'print'=>'print',
-    'invoice_details'=>'invoice_details',
-    'invoice_status'=>'archive',
-    'add_attachment'=>'add_attachment',
-    'file_name'=>'archive',
-    'user_add'=>'archive',
-    'add_date'=>'archive',
-    'invoice_attachments'=>'archive',
-    'archive'=>'archive',
-
+    'collection_amount'=>'collection Amount',
+    'print'=>'Print',
+    'invoice_details'=>'Invoice Details',
+    'invoice_status'=>'Invoice Status',
+    'add_attachment'=>'Add Attachment',
+    'file_name'=>'File Name',
+    'user_add'=>'By User',
+    'add_date'=>'Added Date',
+    'invoice_attachments'=>'Invoice Attachments',
+    'archive'=>'Archive',
+    'user'=>'User', 
 
 
 
