@@ -125,9 +125,9 @@
                                     <th> @lang('site.product')</th>
                                     <th>@lang('site.category')</th>
                                     <th> @lang('site.status')</th>
-                                    <th> @lang('site.invoices_due_date')</th>
+                                    <th> @lang('site.invoice_due_date')</th>
                                     <th>@lang('site.notes')</th>
-                                    <th> @lang('site.invoices_date')</th>
+                                    <th> @lang('site.invoice_date')</th>
                                     <th>@lang('site.user')</th>
                                 </tr>
                             </thead>

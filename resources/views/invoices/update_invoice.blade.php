@@ -101,14 +101,14 @@
                             </div>
 
                             <div class="col">
-                                <label for="inputName" class="control-label">@lang('site.producte')</label>
+                                <label for="inputName" class="control-label">@lang('site.product')</label>
                                 <select id="product" name="product" class="form-control">
                                     <option value="{{ $invoice->product }}"> {{ $invoice->product }}</option>
                                 </select>
                             </div>
 
                             <div class="col">
-                                <label for="inputName" class="control-label">@lang('site.collection amount')</label>
+                                <label for="inputName" class="control-label">@lang('site.collection_amount')</label>
                                 <input type="text" class="form-control" id="inputName" name="Amount_collection"
                                     oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
                                     value="{{ $invoice->amount_collection }}">

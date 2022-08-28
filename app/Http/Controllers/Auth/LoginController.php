@@ -41,7 +41,7 @@ class LoginController extends Controller
     
     protected function credentials(Request $request)
     {
-        return ['email'=>$request->email , 'password'=>$request->password,'status'=>'مفعل'];
+        return ['email'=>$request->email , 'password'=>$request->password,'status'=>'valid'];
     }
 
     public function dd(Request $request){
