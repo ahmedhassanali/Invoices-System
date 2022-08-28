@@ -92,7 +92,7 @@
                                     <th scope="row"> @lang('site.VAT_rate')</th>
                                     <td>{{ $invoice->rate_vat }}</td>
                                     <th scope="row">@lang('site.VAT')</th>
-                                    <td>{{ $invoice->value_vat }}@lang('site.invoices')</td>
+                                    <td>{{ $invoice->value_vat }}</td>
                                     <th scope="row"> @lang('site.total_amount')</th>
                                     <td>{{ $invoice->total }}</td>
                                     <th scope="row"> @lang('site.status')</th>
