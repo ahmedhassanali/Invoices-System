@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title')
-	 @lang('site.invoice_report')
+	 @lang('site.invoices_reports')
 @endsection
 @section('css')
 <!-- Internal Data table css -->
@@ -19,7 +19,7 @@
 					<div class="my-auto">
 						<div class="d-flex">
 							<h4 class="content-title mb-0 my-auto">@lang('site.invoices')
-							</h4><span class="text-muted mt-1 tx-13 mr-2 mb-0">/@lang('site.invoice_report')</span>
+							</h4><span class="text-muted mt-1 tx-13 mr-2 mb-0">/@lang('site.invoices_reports')</span>
 						</div>
 					</div>
 				

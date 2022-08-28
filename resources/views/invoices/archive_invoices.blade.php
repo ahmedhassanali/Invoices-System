@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title')
- قائمة الفواتير
+  @lang('site.archive_invoices')
 @endsection
 @section('css')
 <!-- Internal Data table css -->
@@ -18,7 +18,7 @@
 				<div class="breadcrumb-header justify-content-between">
 					<div class="my-auto">
 						<div class="d-flex">
-							<h4 class="content-title mb-0 my-auto">الفواتير</h4><span class="text-muted mt-1 tx-13 mr-2 mb-0">/ قائمة الفواتير</span>
+							<h4 class="content-title mb-0 my-auto">@lang('site.invoices')</h4><span class="text-muted mt-1 tx-13 mr-2 mb-0">/@lang('site.invoices_list')</span>
 						</div>
 					</div>
 				
@@ -32,7 +32,7 @@
 				<script>
 					window.onload = function(){
 						notif({
-							msg:'تم حذف الفاتورة بنجاح',
+							msg:@lang('site.deleted_successfully'),
 							type: "success"
 						})
 					}
@@ -45,7 +45,7 @@
 				<script>
 					window.onload = function(){
 						notif({
-							msg:'تم الغاء ارشفت الفاتورة بنجاح',
+							msg:@lang('site.cancel_archive_successfully'),
 							type: "success"
 						})
 					}
@@ -67,18 +67,18 @@
 											<thead>
 												<tr>
 													<th class="border-bottom-0">#</th>
-													<th class="border-bottom-0">رقم الفاتورة</th>
-													<th class="border-bottom-0">تاريخ الفاتورة</th>
-													<th class="border-bottom-0">تاريخ الاستحقاق</th>
-													<th class="border-bottom-0">المنتج</th>
-													<th class="border-bottom-0">القسم</th>
-													<th class="border-bottom-0">الخصم</th>
-													<th class="border-bottom-0">نسبة الضريبة</th>
-													<th class="border-bottom-0">قيمة الضريبة</th>
-													<th class="border-bottom-0">الاجمالي</th>
-													<th class="border-bottom-0">الحالة</th>
-													<th class="border-bottom-0">ملاحظات</th>
-													<th class="border-bottom-0">العمليات</th>
+													<th class="border-bottom-0"> @lang('site.invoice_number')</th>
+													<th class="border-bottom-0"> @lang('site.invoice_date')</th>
+													<th class="border-bottom-0"> @lang('site.invoice_due_date')</th>
+													<th class="border-bottom-0">@lang('site.product')</th>
+													<th class="border-bottom-0">@lang('site.category')</th>
+													<th class="border-bottom-0">@lang('site.discount')</th>
+													<th class="border-bottom-0"> @lang('site.VAT_rate')</th>
+													<th class="border-bottom-0"> @lang('site.VAT')</th>
+													<th class="border-bottom-0">@lang('site.total')</th>
+													<th class="border-bottom-0">@lang('site.status')</th>
+													<th class="border-bottom-0">@lang('site.notes')</th>
+													<th class="border-bottom-0">@lang('site.actions')</th>
 												</tr>
 											</thead>
 											<tbody>
@@ -119,11 +119,11 @@
 
 														<a class=" btn btn-sm btn-danger" data-effect="effect-scale"
 														data-toggle="modal"  data-invoice_id = "{{ $invoice->id }}"
-														href="#modal_delete_archive" title="حذف"><i class="las la-trash"></i>حذف</a>
+														href="#modal_delete_archive" title="حذف"><i class="las la-trash"></i>@lang('site.delete')</a>
 
 														<a class=" btn btn-sm btn-danger mt-1" data-effect="effect-scale"
 														data-toggle="modal"  data-invoice_id = "{{ $invoice->id }}"
-														href="#modal_archive" title="نقل الي الفواتير">نقل الى الفواتير</a>
+														href="#modal_archive" title="نقل الي الفواتير">@lang('site.cancel_archive')</a>
 													
 													</td>
 
@@ -147,7 +147,7 @@
 							<div class="modal-dialog" role="document">
 								<div class="modal-content modal-content-demo">
 									<div class="modal-header">
-										<h6 class="modal-title">حذف فاتورة</h6><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
+										<h6 class="modal-title">@lang('site.delete_invoice')</h6><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
 									</div>
 									<div class="modal-body">
 									<form action="invoices/destroy_archive" method="post" >
@@ -156,12 +156,12 @@
 
 											<div class="form-group">
 												<input type="hidden" name="invoice_id" id="invoice_id" value="">
-												<label for="">هل انت متاكد من حذف هذة الفاتورة</label>
+												<label for="">@lang('site.Are_invoice_deleted')</label>
 											</div>
 											
 											<div class="modal-footer">
-												<button class="btn btn-info" type="submit">حذف الفاتورة</button>
-												<button class="btn btn-danger" data-dismiss="modal" type="button">اغلاق</button>
+												<button class="btn btn-info" type="submit">@lang('site.delete')</button>
+												<button class="btn btn-danger" data-dismiss="modal" type="button">@lang('site.close')</button>
 											</div>
 										</form>
 									</div>
@@ -175,7 +175,7 @@
 							<div class="modal-dialog" role="document">
 								<div class="modal-content modal-content-demo">
 									<div class="modal-header">
-										<h6 class="modal-title">الغاء ارشفة الفاتورة</h6><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
+										<h6 class="modal-title">@lang('site.cancel_archive')</h6><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
 									</div>
 									<div class="modal-body">
 									<form action={{ route('invoice_cancel_archive') }} method="post" >
@@ -183,12 +183,12 @@
 										
 											<div class="form-group">
 												<input type="hidden" name="invoice_id" id="invoice_id" value="">
-												<label for="">هل انت متاكد من عملية الغاء الارشفة</label>
+												<label for="">@lang('site.Are_cancel_invoice_archive')</label>
 											</div>
 											
 											<div class="modal-footer">
-												<button class="btn btn-info" type="submit">تاكيد </button>
-												<button class="btn btn-danger" data-dismiss="modal" type="button">اغلاق</button>
+												<button class="btn btn-info" type="submit"> @lang('site.sure')</button>
+												<button class="btn btn-danger" data-dismiss="modal" type="button">اغلاق@lang('site.close')</button>
 											</div>
 										</form>
 									</div>

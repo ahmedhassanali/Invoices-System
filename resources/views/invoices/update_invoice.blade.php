@@ -14,7 +14,7 @@
 @endsection
 
 @section('title')
-    تعديل فاتورة
+    @lang('site.update_invoice')
 @stop
 
 
@@ -23,8 +23,8 @@
     <div class="breadcrumb-header justify-content-between">
         <div class="my-auto">
             <div class="d-flex">
-                <h4 class="content-title mb-0 my-auto">الفواتير</h4><span class="text-muted mt-1 tx-13 mr-2 mb-0">/
-                    تعديل فاتورة</span>
+                <h4 class="content-title mb-0 my-auto">@lang('site.invoices')</h4><span class="text-muted mt-1 tx-13 mr-2 mb-0">/
+                    @lang('site.update_invoice')</span>
             </div>
         </div>
     </div>
@@ -64,20 +64,20 @@
                         {{-- 1 --}}
                         <div class="row">
                             <div class="col">
-                                <label for="inputName" class="control-label">رقم الفاتورة</label>
+                                <label for="inputName" class="control-label">@lang('site.invoice_number')</label>
                                 <input type="hidden" name="invoice_id" value="{{ $invoice->id }}">
                                 <input type="text" class="form-control" id="inputName" name="invoice_number"
-                                    title="يرجي ادخال رقم الفاتورة" value="{{ $invoice->invoice_number }}" required>
+                                    title="" value="{{ $invoice->invoice_number }}" required>
                             </div>
 
                             <div class="col">
-                                <label>تاريخ الفاتورة</label>
+                                <label>@lang('site.invoice_date')</label>
                                 <input class="form-control fc-datepicker" name="invoice_Date" placeholder="YYYY-MM-DD"
                                     type="text" value="{{ $invoice->invoice_date }}" required>
                             </div>
 
                             <div class="col">
-                                <label>تاريخ الاستحقاق</label>
+                                <label>@lang('site.invoice_due_date')</label>
                                 <input class="form-control fc-datepicker" name="Due_date" placeholder="YYYY-MM-DD"
                                     type="text" value="{{ $invoice->due_date }}" required>
                             </div>
@@ -87,7 +87,7 @@
                         {{-- 2 --}}
                         <div class="row">
                             <div class="col">
-                                <label for="inputName" class="control-label">القسم</label>
+                                <label for="inputName" class="control-label">@lang('site.category')</label>
                                 <select name="Section" class="form-control SlectBox" onclick="console.log($(this).val())"
                                     onchange="console.log('change is firing')">
                                     <!--placeholder-->
@@ -101,14 +101,14 @@
                             </div>
 
                             <div class="col">
-                                <label for="inputName" class="control-label">المنتج</label>
+                                <label for="inputName" class="control-label">@lang('site.producte')</label>
                                 <select id="product" name="product" class="form-control">
                                     <option value="{{ $invoice->product }}"> {{ $invoice->product }}</option>
                                 </select>
                             </div>
 
                             <div class="col">
-                                <label for="inputName" class="control-label">مبلغ التحصيل</label>
+                                <label for="inputName" class="control-label">@lang('site.collection amount')</label>
                                 <input type="text" class="form-control" id="inputName" name="Amount_collection"
                                     oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
                                     value="{{ $invoice->amount_collection }}">
@@ -121,23 +121,23 @@
                         <div class="row">
 
                             <div class="col">
-                                <label for="inputName" class="control-label">مبلغ العمولة</label>
+                                <label for="inputName" class="control-label">@lang('site.commission_amount')</label>
                                 <input type="text" class="form-control form-control-lg" id="Amount_Commission"
-                                    name="Amount_Commission" title="يرجي ادخال مبلغ العمولة "
+                                    name="Amount_Commission" title=""
                                     oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
                                     value="{{ $invoice->amount_commission }}" required>
                             </div>
 
                             <div class="col">
-                                <label for="inputName" class="control-label">الخصم</label>
-                                <input type="text" class="form-control form-control-lg" id="Discount" name="Discount"
-                                    title="يرجي ادخال مبلغ الخصم "
+                                <label for="inputName" class="control-label">@lang('site.discount')</label>
+                                <input type="text" class="form-control form-control-lg" id="Discount"
+                                    name="Discount" title=" "
                                     oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
                                     value="{{ $invoice->discount }}" required>
                             </div>
 
                             <div class="col">
-                                <label for="inputName" class="control-label">نسبة ضريبة القيمة المضافة</label>
+                                <label for="inputName" class="control-label"> @lang('site.VAT_rate')</label>
                                 <select name="Rate_VAT" id="Rate_VAT" class="form-control" onchange="myFunction()">
                                     <!--placeholder-->
                                     <option value=" {{ $invoice->rate_vat }}">
@@ -153,13 +153,13 @@
 
                         <div class="row">
                             <div class="col">
-                                <label for="inputName" class="control-label">قيمة ضريبة القيمة المضافة</label>
+                                <label for="inputName" class="control-label">@lang('site.VAT')</label>
                                 <input type="text" class="form-control" id="Value_VAT" name="Value_VAT"
                                     value="{{ $invoice->value_vat }}" readonly>
                             </div>
 
                             <div class="col">
-                                <label for="inputName" class="control-label">الاجمالي شامل الضريبة</label>
+                                <label for="inputName" class="control-label">@lang('site.total_with_VAT')</label>
                                 <input type="text" class="form-control" id="Total" name="Total" readonly
                                     value="{{ $invoice->total }}">
                             </div>
@@ -168,14 +168,14 @@
                         {{-- 5 --}}
                         <div class="row">
                             <div class="col">
-                                <label for="exampleTextarea">ملاحظات</label>
+                                <label for="exampleTextarea">@lang('site.notes')</label>
                                 <textarea class="form-control" id="exampleTextarea" name="note" rows="3">
                                 {{ $invoice->note }}</textarea>
                             </div>
                         </div><br>
 
                         <div class="d-flex justify-content-center">
-                            <button type="submit" class="btn btn-primary">حفظ البيانات</button>
+                            <button type="submit" class="btn btn-primary">@lang('site.save')</button>
                         </div>
 
 
@@ -225,7 +225,6 @@
         var date = $('.fc-datepicker').datepicker({
             dateFormat: 'yy-mm-dd'
         }).val();
-
     </script>
 
     <script>
@@ -252,7 +251,6 @@
             });
 
         });
-
     </script>
 
 
@@ -287,7 +285,6 @@
             }
 
         }
-
     </script>
 
 

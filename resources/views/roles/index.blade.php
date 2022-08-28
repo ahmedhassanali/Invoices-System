@@ -136,7 +136,7 @@
                             <input class="form-control" name="role_name" id="role_name" type="text" readonly>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">@lang('site.cansel')</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">@lang('site.cancel')</button>
                             <button type="submit" class="btn btn-danger">@lang('site.sure')</button>
                         </div>
                 </div>

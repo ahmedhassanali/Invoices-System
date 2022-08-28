@@ -10,15 +10,14 @@
     </style>
 @endsection
 @section('title')
-    معاينه طباعة الفاتورة
+      @lang('site.Invoice_printing_preview')
 @stop
 @section('page-header')
     <!-- breadcrumb -->
     <div class="breadcrumb-header justify-content-between">
         <div class="my-auto">
             <div class="d-flex">
-                <h4 class="content-title mb-0 my-auto">الفواتير</h4><span class="text-muted mt-1 tx-13 mr-2 mb-0">/
-                    معاينة طباعة الفاتورة</span>
+                <h4 class="content-title mb-0 my-auto">@lang('site.invoices')</h4><span class="text-muted mt-1 tx-13 mr-2 mb-0">/@lang('site.Invoice_printing_preview')</span>
             </div>
         </div>
 
@@ -33,7 +32,7 @@
                 <div class="card card-invoice">
                     <div class="card-body">
                         <div class="invoice-header">
-                            <h1 class="invoice-title">فاتورة تحصيل</h1>
+                            <h1 class="invoice-title">@lang('site.collection invoice')</h1>
                             <div class="billed-from">
                                 <h6>BootstrapDash, Inc.</h6>
                                 <p>201 Something St., Something Town, YT 242, Country 6546<br>
@@ -52,14 +51,14 @@
                                 </div>
                             </div>
                             <div class="col-md">
-                                <label class="tx-gray-600">معلومات الفاتورة</label>
-                                <p class="invoice-info-row"><span>رقم الفاتورة</span>
+                                <label class="tx-gray-600">@lang('site.invoice_information')</label>
+                                <p class="invoice-info-row"><span>@lang('site.invoices_number')</span>
                                     <span>{{ $invoices->invoice_number }}</span></p>
-                                <p class="invoice-info-row"><span>تاريخ الاصدار</span>
+                                <p class="invoice-info-row"><span> @lang('site.invoice_date')</span>
                                     <span>{{ $invoices->invoice_date }}</span></p>
-                                <p class="invoice-info-row"><span>تاريخ الاستحقاق</span>
+                                <p class="invoice-info-row"><span> @lang('site.invoice_due_date')</span>
                                     <span>{{ $invoices->due_date }}</span></p>
-                                <p class="invoice-info-row"><span>القسم</span>
+                                <p class="invoice-info-row"><span>@lang('site.category')</span>
                                     <span>{{ $invoices->categories->section_name }}</span></p>
                             </div>
                         </div>
@@ -68,10 +67,10 @@
                                 <thead>
                                     <tr>
                                         <th class="wd-20p">#</th>
-                                        <th class="wd-40p">المنتج</th>
-                                        <th class="tx-center">مبلغ التحصيل</th>
-                                        <th class="tx-right">مبلغ العمولة</th>
-                                        <th class="tx-right">الاجمالي</th>
+                                        <th class="wd-40p">@lang('site.product')</th>
+                                        <th class="tx-center"> @lang('site.collection amount')</th>
+                                        <th class="tx-right">@lang('site.commission_amount')</th>
+                                        <th class="tx-right">@lang('site.total')</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -95,20 +94,20 @@
 
                                             </div><!-- invoice-notes -->
                                         </td>
-                                        <td class="tx-right">الاجمالي</td>
+                                        <td class="tx-right">@lang('site.total_amount')</td>
                                         <td class="tx-right" colspan="2"> {{ number_format($total, 2) }}</td>
                                     </tr>
                                     <tr>
-                                        <td class="tx-right">نسبة الضريبة ({{ $invoices->rate_vat }})</td>
+                                        <td class="tx-right">@lang('site.VAT_rate')({{ $invoices->rate_vat }})</td>
                                         <td class="tx-right" colspan="2">287.50</td>
                                     </tr>
                                     <tr>
-                                        <td class="tx-right">قيمة الخصم</td>
+                                        <td class="tx-right">@lang('site.discount')</td>
                                         <td class="tx-right" colspan="2"> {{ number_format($invoices->discount, 2) }}</td>
 
                                     </tr>
                                     <tr>
-                                        <td class="tx-right tx-uppercase tx-bold tx-inverse">الاجمالي شامل الضريبة</td>
+                                        <td class="tx-right tx-uppercase tx-bold tx-inverse">@lang('site.total_with_VAT')</td>
                                         <td class="tx-right" colspan="2">
                                             <h4 class="tx-primary tx-bold">{{ number_format($invoices->total, 2) }}</h4>
                                         </td>
@@ -121,7 +120,7 @@
 
 
                         <button class="btn btn-danger  float-left mt-3 mr-2" id="print_Button" onclick="printDiv()"> <i
-                                class="mdi mdi-printer ml-1"></i>طباعة</button>
+                                class="mdi mdi-printer ml-1"></i>@lang('site.print')</button>
                     </div>
                 </div>
             </div>

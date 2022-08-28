@@ -32,6 +32,9 @@ return [
     'invoice_type'=>'Invoice Type',
     'Are_invoice_deleted' => 'Are you sure that this invoice has been deleted?',
     'Are_invoice_archive' => 'Are you sure that this invoice has been archived?',
+    'Are_cancel_invoice_archive' => 'Are you sure that this invoice has been cancel archived?',
+    'Are_atta_deleted' => 'Are you sure that this attachment has been deleted?',
+
     'invoice_num' => 'Invoice Number',
     'invoice_date' => 'Invoice Date',
     'invoice_due_date' => 'Invoice Due Date',
@@ -57,7 +60,7 @@ return [
     'delete_user'=>'Delete User',
     'Are_user_deleted'=>'Are you sure that this user has been deleted?',
     'sure'=>'sure',
-    'cansel'=>'cansel',
+    'cancel'=>'Cancel',
     'add' => 'Add',
     'add_new_category'=>'Add New Category',
     'create' => 'Create',
@@ -78,6 +81,9 @@ return [
     'remember_me' => 'Remember Me',
     'password' => 'Password',
     'confirm_password' => 'Password Confirmation',
+    'archive_invoices'=>'Archived Invoices',
+    'cancel_archive_successfully'=>'Cancel Archived Successfully',
+    'cancel_archive'=>'Cancel Archived',
 
     'invoice_number'=>'Invoice Number',
     'to_date'=>'To Date',
@@ -87,6 +93,8 @@ return [
     'delete_invoice'=>'Delete Invoice',
     'archive_invoice'=>'Archive Invoice',
     'print_invoice'=>'Print Invoice',
+    'invoice_report'=>'Invoice Report',
+    'archive'=>'archive',
 
 
 
