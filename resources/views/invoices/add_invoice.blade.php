@@ -211,8 +211,7 @@
     <script src='/assets/plugins/spectrum-colorpicker/spectrum.js'></script>
     <!-- Internal form-elements js -->
     <script src='/assets/js/form-elements.js'></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
     <script>
         var date = $('.fc-datepicker').datepicker({
             dateFormat: 'yy-mm-dd'
@@ -220,7 +219,7 @@
     </script>
 
 
-    <script>
+    {{-- <script>
         $(document).ready(function() {
             $('select[name="Section"]').on('change', function() {
                 var section_id = $(this).val();
@@ -232,9 +231,9 @@
                         success: function(data) {
                             $('select[name="product"]').empty();
                             $.each(data, function(key, value) {
-                                $("select[name='product']").append(
-                                    '<option value="' + value + '">' + value +
-                                    '</option>'
+                                $("select[name='product']").append
+                                (
+                                    '<option value="' + value + '">' + value +'</option>'
                                 );
                             });
                         },
@@ -245,7 +244,31 @@
                 }
             });
         });
-    </script>
+    </script> --}}
+
+<script>
+    $(document).ready(function() {
+        $('select[name="Section"]').on('change', function() {
+            var SectionId = $(this).val();
+            if (SectionId) {
+                $.ajax({
+                    url: "{{ URL::to('section') }}/" + SectionId,
+                    type: "GET",
+                    dataType: "json",
+                    success: function(data) {
+                        $('select[name="product"]').empty();
+                        $.each(data, function(key, value) {
+                            $('select[name="product"]').append('<option value="' +
+                                value + '">' + value + '</option>');
+                        });
+                    },
+                });
+            } else {
+                console.log('AJAX load did not work');
+            }
+        });
+    });
+</script>
 
     <script>
         function myFunction() {
