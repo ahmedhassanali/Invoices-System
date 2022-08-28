@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title')
- قائمة الفواتير
+	 @lang('site.invoice_report')
 @endsection
 @section('css')
 <!-- Internal Data table css -->
@@ -18,7 +18,8 @@
 				<div class="breadcrumb-header justify-content-between">
 					<div class="my-auto">
 						<div class="d-flex">
-							<h4 class="content-title mb-0 my-auto">الفواتير</h4><span class="text-muted mt-1 tx-13 mr-2 mb-0">/ قائمة الفواتير</span>
+							<h4 class="content-title mb-0 my-auto">@lang('site.invoices')
+							</h4><span class="text-muted mt-1 tx-13 mr-2 mb-0">/@lang('site.invoice_report')</span>
 						</div>
 					</div>
 				
@@ -32,7 +33,7 @@
 				<script>
 					window.onload = function(){
 						notif({
-							msg:'تم حذف الفاتورة بنجاح',
+							msg: @lang('site.deleted_successfully'),
 							type: "success"
 						})
 					}
@@ -45,7 +46,7 @@
 				<script>
 					window.onload = function(){
 						notif({
-							msg:'تم ارشفت الفاتورة بنجاح',
+							msg:@lang('site.archive_successfully'),
 							type: "success"
 						})
 					}
@@ -70,28 +71,28 @@
 									<div class="row">
 				
 										<div class="col-lg-3 mg-t-20 mg-lg-t-0" id="type">
-											<p class="mg-b-10">تحديد نوع الفواتير</p>
+											<p class="mg-b-10">@lang('site.invoice_type')</p>
 											<select value='%%' class="form-control select2" name="type"
 												>
 												<option  selected>
 													
 												</option>
 				
-												<option value=1>الفواتير المدفوعة</option>
-												<option value=2>الفواتير الغير مدفوعة</option>
-												<option value=3>الفواتير المدفوعة جزئيا</option>
+												<option value=1>  @lang('site.paid_invoices')</option>
+												<option value=2>  @lang('site.unpaid_invoices')</option>
+												<option value=3>  @lang('site.partially_paid_invoices')</option>
 				
 											</select>
 										</div><!-- col-4 -->
 				
 										<div class="col-lg-3 mg-t-20 mg-lg-t-0" id="invoice_number">
-											<p class="mg-b-10">البحث برقم الفاتورة</p>
+											<p class="mg-b-10"> @lang('site.invoice_number')</p>
 											<input type="text" class="form-control" id="invoice_number" name="invoice_number">
 										</div><!-- col-4 -->
 				
 										<div class="col-lg-3 mg-t-20 mg-lg-t-0">
 
-											<label for="inputName" class="control-label">القسم</label>
+											<label for="inputName" class="control-label">@lang('site.category')</label>
 											<select value="%%"  class="form-control select2"  name="Section"
 											onclick="console.log($(this).val())"
 												onchange="console.log('change is firing')">
@@ -105,9 +106,9 @@
 										</div>
 										
 										<div class="col-lg-3 mg-t-20 mg-lg-t-0">
-											<label for="inputName"  class="control-label">المنتج</label>
+											<label for="inputName"  class="control-label">@lang('site.producte')</label>
 											<select id="product"  name="product" class="form-control select2">
-												<option selected value="%%" >حدد المنتج</option>
+												<option selected value="%%" > @lang('site.producte')</option>
 											</select>
 										</div>
 
@@ -115,7 +116,7 @@
 			
 									<div class="row">
 										<div class="col-lg-3" id="start_at">
-											<label for="exampleFormControlSelect1">من تاريخ</label>
+											<label for="exampleFormControlSelect1"> @lang('site.from_date')</label>
 											<div class="input-group">
 												<div class="input-group-prepend">
 													<div class="input-group-text">
@@ -127,7 +128,7 @@
 										</div>
 
 										<div class="col-lg-3" id="end_at">
-											<label for="exampleFormControlSelect1">الي تاريخ</label>
+											<label for="exampleFormControlSelect1"> @lang('site.to_date')</label>
 											<div class="input-group">
 												<div class="input-group-prepend">
 													<div class="input-group-text">
@@ -140,7 +141,7 @@
 
 										<div class=" col-lg-3 col-sm-2 col-md-2 mt-2">
 											<label class="" for=""></label>
-											<button class="btn btn-primary btn-block">بحث</button>
+											<button class="btn btn-primary btn-block">@lang('site.search')</button>
 										</div>
 									</div>
 										
@@ -165,18 +166,18 @@
 											<thead>
 												<tr>
 													<th class="border-bottom-0">#</th>
-													<th class="border-bottom-0">رقم الفاتورة</th>
-													<th class="border-bottom-0">تاريخ الفاتورة</th>
-													<th class="border-bottom-0">تاريخ الاستحقاق</th>
-													<th class="border-bottom-0">المنتج</th>
-													<th class="border-bottom-0">القسم</th>
-													<th class="border-bottom-0">الخصم</th>
-													<th class="border-bottom-0">نسبة الضريبة</th>
-													<th class="border-bottom-0">قيمة الضريبة</th>
-													<th class="border-bottom-0">الاجمالي</th>
-													<th class="border-bottom-0">الحالة</th>
-													<th class="border-bottom-0">ملاحظات</th>
-													<th class="border-bottom-0">العمليات</th>
+													<th class="border-bottom-0"> @lang('site.invoice_number')</th>
+													<th class="border-bottom-0"> @lang('site.invoice_date')</th>
+													<th class="border-bottom-0"> @lang('site.invoice_due')</th>
+													<th class="border-bottom-0">@lang('site.product')</th>
+													<th class="border-bottom-0">@lang('site.category')</th>
+													<th class="border-bottom-0">@lang('site.discount')</th>
+													<th class="border-bottom-0"> @lang('site.VAT_rate')</th>
+													<th class="border-bottom-0"> @lang('site.VAT')</th>
+													<th class="border-bottom-0">@lang('site.total')</th>
+													<th class="border-bottom-0">@lang('site.status')</th>
+													<th class="border-bottom-0">@lang('site.notes')</th>
+													<th class="border-bottom-0">@lang('site.actions')</th>
 												</tr>
 											</thead>
 											<tbody>
@@ -216,21 +217,21 @@
 													<td class="">
 
 														<a class=" btn btn-sm btn-info"
-														href="{{ url('invoice/edit') }}/{{ $invoice->id }}" title="تعديل"><i class="las la-pen"></i>تعديل</a>
+														href="{{ url('invoice/edit') }}/{{ $invoice->id }}" title="تعديل"><i class="las la-pen"></i>@lang('site.update')</a>
 
 														<a class=" btn btn-sm btn-danger" data-effect="effect-scale"
 														data-toggle="modal"  data-invoice_id = "{{ $invoice->id }}"
-														href="#modal_delete" title="حذف"><i class="las la-trash"></i>حذف</a>
+														href="#modal_delete" title="حذف"><i class="las la-trash"></i>@lang('site.delete')</a>
 													
 														<a class="btn btn-sm btn-info mt-1"
-														href="{{ url('invoice/edit_status') }}/{{ $invoice->id }}" title=" "><i class="las la-pen"></i> تعديل الحالة</a>
+														href="{{ url('invoice/edit_status') }}/{{ $invoice->id }}" title=" "><i class="las la-pen"></i>@lang('site.update_status')</a>
 
 														<a class=" btn btn-sm btn-danger mt-1" data-effect="effect-scale"
 														data-toggle="modal"  data-invoice_id = "{{ $invoice->id }}"
-														href="#modal_archive" title="نقل الي الارشيف">الارشفة</a>
+														href="#modal_archive" title="نقل الي الارشيف">@lang('site.archive')</a>
 
 														<a class="btn btn-sm btn-info mt-1"
-														href="{{ url('invoice/print') }}/{{ $invoice->id }}" title=" "><i class="las la-pen"></i> طباعة الفاتورة</a>
+														href="{{ url('invoice/print') }}/{{ $invoice->id }}" title=" "><i class="las la-pen"></i> @lang('site.print_invoice')</a>
 
 														
 													</td>
@@ -254,7 +255,7 @@
 							<div class="modal-dialog" role="document">
 								<div class="modal-content modal-content-demo">
 									<div class="modal-header">
-										<h6 class="modal-title">حذف فاتورة</h6><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
+										<h6 class="modal-title">@lang('site.delete_invoice')</h6><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
 									</div>
 									<div class="modal-body">
 									<form action="invoices/destroy" method="post" >
@@ -262,12 +263,12 @@
 										{{method_field('delete')}}
 											<div class="form-group">
 												<input type="hidden" name="invoice_id" id="invoice_id" value="">
-												<label for="">هل انت متاكد من حذف هذة الفاتورة</label>
+												<label for="">@lang('site.Are_invoice_deleted')</label>
 											</div>
 											
 											<div class="modal-footer">
-												<button class="btn btn-info" type="submit">حذف الفاتورة</button>
-												<button class="btn btn-danger" data-dismiss="modal" type="button">اغلاق</button>
+												<button class="btn btn-info" type="submit"> @lang('site.sure')</button>
+												<button class="btn btn-danger" data-dismiss="modal" type="button">@lang('site.cancel')</button>
 											</div>
 										</form>
 									</div>
@@ -281,7 +282,7 @@
 							<div class="modal-dialog" role="document">
 								<div class="modal-content modal-content-demo">
 									<div class="modal-header">
-										<h6 class="modal-title">ارشفة الفاتورة</h6><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
+										<h6 class="modal-title">@lang('site.archive_invoice')</h6><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
 									</div>
 									<div class="modal-body">
 									<form action={{ route('archive') }} method="post" >
@@ -289,12 +290,12 @@
 										
 											<div class="form-group">
 												<input type="hidden" name="invoice_id" id="invoice_id" value="">
-												<label for="">هل انت متاكد من عملية الارشفة</label>
+												<label for="">@lang('site.Are_invoice_archive')</label>
 											</div>
 											
 											<div class="modal-footer">
-												<button class="btn btn-info" type="submit">تاكيد </button>
-												<button class="btn btn-danger" data-dismiss="modal" type="button">اغلاق</button>
+												<button class="btn btn-info" type="submit">@lang('site.sure')</button>
+												<button class="btn btn-danger" data-dismiss="modal" type="button">@lang('site.close')</button>
 											</div>
 										</form>
 									</div>

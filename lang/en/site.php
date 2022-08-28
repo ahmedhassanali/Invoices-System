@@ -27,8 +27,11 @@ return [
     'role_name'=>'Role Name',
     'add_role'=>'Add Role',
     'view_role'=>'View Role',
-
-
+    'update_role'=>'Update Role',
+    'archive_successfully'=>'Archived Successfully',
+    'invoice_type'=>'Invoice Type',
+    'Are_invoice_deleted' => 'Are you sure that this invoice has been deleted?',
+    'Are_invoice_archive' => 'Are you sure that this invoice has been archived?',
     'invoice_num' => 'Invoice Number',
     'invoice_date' => 'Invoice Date',
     'invoice_due_date' => 'Invoice Due Date',

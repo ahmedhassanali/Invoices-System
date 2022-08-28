@@ -40,6 +40,8 @@ return[
     'close'=>'اغلاق',
     'update_category'=>'تعديل القسم',
     'Are_product_deleted' => 'هل انت متاكد من حذف هذا المنتج',
+    'Are_invoice_deleted' => 'هل انت متاكد من حذف هذه الفاتورة',
+    'Are_invoice_archive' => 'هل انت متاكد من ارشفت هذه الفاتورة',
     'Are_category_deleted'=>'هل انت متاكد من حذف هذا القسم',
     'category_delete'=>'حذف القسم',
     'product_name'=>'اسم المنتج',
@@ -71,6 +73,8 @@ return[
      'added_successfully' => 'تم الاضافة بنجاح',
      'deleted_successfully' => 'تم الحذف بنجاح',
      'updated_successfully' => 'تم التعديل بنجاح',
+     'archive_successfully'=>'تم الارشفة بنجاح',
+     'invoice_type'=>'نوع الفاتورة',
      'permissions' => 'الصلاحيات',
      'proudects'=> 'منتجات',
      'category'=>'اقسام',
@@ -103,6 +107,7 @@ return[
      'role_name'=>'اسم الصلاحية',
      'add_role'=>' اضافة صلاحية',
      'view_role'=>'عرض صلاحية',
+
      'ar' => [
          'name'=>'الاسم باللغة العربية',
          'description'=>'الوصف باللغة العربية',
