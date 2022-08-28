@@ -108,6 +108,15 @@ return[
      'add_role'=>' اضافة صلاحية',
      'view_role'=>'عرض صلاحية',
 
+     'invoice_number'=>'رقم الفاتورة',
+     'to_date'=>'من تاريخ',
+     'from_date'=>'الي تاريخ',
+     'status'=>'الحالة',
+     'update_status'=>'تعديل الحالة',
+     'delete_invoice'=>'حذف فاتورة',
+     'archive_invoice'=>'ارشيف فاتورة',
+     'print_invoice'=>'طباعة فاتورة',
+
      'ar' => [
          'name'=>'الاسم باللغة العربية',
          'description'=>'الوصف باللغة العربية',

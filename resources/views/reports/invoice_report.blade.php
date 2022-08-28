@@ -106,9 +106,9 @@
 										</div>
 										
 										<div class="col-lg-3 mg-t-20 mg-lg-t-0">
-											<label for="inputName"  class="control-label">@lang('site.producte')</label>
+											<label for="inputName"  class="control-label">@lang('site.product')</label>
 											<select id="product"  name="product" class="form-control select2">
-												<option selected value="%%" > @lang('site.producte')</option>
+												<option selected value="%%" > @lang('site.product')</option>
 											</select>
 										</div>
 
@@ -168,7 +168,7 @@
 													<th class="border-bottom-0">#</th>
 													<th class="border-bottom-0"> @lang('site.invoice_number')</th>
 													<th class="border-bottom-0"> @lang('site.invoice_date')</th>
-													<th class="border-bottom-0"> @lang('site.invoice_due')</th>
+													<th class="border-bottom-0"> @lang('site.invoice_due_date')</th>
 													<th class="border-bottom-0">@lang('site.product')</th>
 													<th class="border-bottom-0">@lang('site.category')</th>
 													<th class="border-bottom-0">@lang('site.discount')</th>

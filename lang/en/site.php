@@ -79,6 +79,17 @@ return [
     'password' => 'Password',
     'confirm_password' => 'Password Confirmation',
 
+    'invoice_number'=>'Invoice Number',
+    'to_date'=>'To Date',
+    'from_date'=>'From Date',
+    'status'=>'Status',
+    'update_status'=>'Update Status',
+    'delete_invoice'=>'Delete Invoice',
+    'archive_invoice'=>'Archive Invoice',
+    'print_invoice'=>'Print Invoice',
+
+
+
     'added_successfully' => 'Added Successfully',
     'updated_successfully' => 'Updated Successfully',
     'deleted_successfully' => 'Deleted Successfully',
