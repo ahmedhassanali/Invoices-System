@@ -18,7 +18,6 @@
 @stop
 
 @section('page-header')
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
 
     <!-- breadcrumb -->
     <div class="breadcrumb-header justify-content-between">
@@ -33,6 +32,7 @@
 @endsection
 
 @section('content')
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
 
     @if (session()->has('Add'))
         <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -228,7 +228,7 @@
                 if (section_id) {
                     $.ajax({
                         // url: "{{ URL::to('section') }}/" + SectionId,
-                        url: '/section/'+ section_id+'/',
+                        url: '/section/'+ section_id,
                         // url: 'https://invoices-sys.herokuapp.com/ar/section/'+section_id. 
                         type: "GET",
                         dataType: "json",
