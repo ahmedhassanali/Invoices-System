@@ -16,7 +16,8 @@ return [
     'invoices_reports' => 'تقارير الفواتير',
     'users' => 'المستخدمين',
     'user' => 'المستخدم',
-
+    'delete_attachment'=>'حذف مرفق',
+    'downlode'=>'تحميل',
 
     'collection_invoice'=>'فاتورت صارف',
     'invoice_information'=>'معلومات الفاتورة',

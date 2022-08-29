@@ -49,7 +49,7 @@
     <!-- row -->
     <div class="">
 
-        <div class="panel panel-primary tabs-style-3">
+        <div class="panel panel-primary tabs-style-3 card">
             <div class="tab-menu-heading">
                 <div class="tabs-menu ">
                     <!-- Tabs -->
@@ -198,8 +198,7 @@
 
                                                 <a class="btn btn-outline-success btn-sm"
                                                     href="{{ url('View_file') }}/{{ $invoice->invoice_number }}/{{ $attachment->file_name }}"
-                                                    role="button"><i class="fas fa-eye"></i>&nbsp;
-                                                    عرض</a>
+                                                    role="button"><i class="fas fa-eye"></i>&nbsp;@lang('site.show')</a>
 
                                                 <a class="btn btn-outline-info btn-sm"
                                                     href="{{ url('dowenload_file') }}/{{ $invoice->invoice_number }}/{{ $attachment->file_name }}"
@@ -255,8 +254,8 @@
 
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">@lang('site.cancel')</button>
                         <button type="submit" class="btn btn-danger">@lang('site.sure')</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">@lang('site.close')</button>
                     </div>
                 </form>
             </div>

@@ -138,7 +138,9 @@
                                                 href="{{ url('invoice/print') }}/{{ $invoice->id }}" title=" "><i
                                                     class="las la-pen"></i>@lang('site.print_invoice')</a>
 
-
+                                            <a class="btn btn-sm btn-info mt-1"
+                                            href="{{ url('invoicesDetails') }}/{{ $invoice->id }} "><i
+                                            class="las la-pen"></i>@lang('site.invoice_details')</a>
                                         </td>
                                     </tr>
                                     @php

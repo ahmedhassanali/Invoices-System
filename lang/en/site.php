@@ -110,6 +110,8 @@ return [
     'invoice_attachments'=>'Invoice Attachments',
     'archive'=>'Archive',
     'user'=>'User', 
+    'delete_attachment'=>'Delete Attachment',
+    'downlode'=>'Downlode',
 
 
 
