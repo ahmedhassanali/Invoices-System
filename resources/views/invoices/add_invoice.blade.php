@@ -241,13 +241,7 @@
                         },
 
                     });
-                            .done(function($data) {
-                    alert('All good!');
-                })
-                .fail(function($data){
-                    alert('Error, see log data');
-                    console.log($data);
-                })
+             
                 } else {
                     console.log('AJAX load did not work');
                 }
