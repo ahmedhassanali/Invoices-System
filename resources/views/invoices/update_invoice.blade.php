@@ -95,7 +95,9 @@
                                         {{ $invoice->categories->section_name }}
                                     </option>
                                     @foreach ($sections as $section)
+                                        @if ($invoice->categories->id  != $section->id  )       
                                         <option value="{{ $section->id }}"> {{ $section->section_name }}</option>
+                                        @endif
                                     @endforeach
                                 </select>
                             </div>
