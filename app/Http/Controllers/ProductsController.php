@@ -47,15 +47,14 @@ class ProductsController extends Controller
         
         $id = $request->product_id;
         $section_id = categories::where('section_name',$request->section_name)->first()->id;
+        $product = products::find($id);
         
         $this->validate($request,[
 
-            'product_name'=>'required|max:255|unique:products,product_name,'.$id,
-            // 'product_name' =>['required', Rule::unique('products')->where('categories_id',  $section_id)],
+            'product_name' => ['required', Rule::unique('products')->ignore($product)->where('categories_id',  $section_id)]
 
         ]);
     
-        $product = products::find($id);
         $product->update([
         'product_name' => $request->product_name,
         'description' => $request->description,
