@@ -1,4 +1,3 @@
-
 @extends('layouts.master')
 @section('css')
     <style>
@@ -10,14 +9,15 @@
     </style>
 @endsection
 @section('title')
-      @lang('site.Invoice_printing_preview')
+    @lang('site.Invoice_printing_preview')
 @stop
 @section('page-header')
     <!-- breadcrumb -->
     <div class="breadcrumb-header justify-content-between">
         <div class="my-auto">
             <div class="d-flex">
-                <h4 class="content-title mb-0 my-auto">@lang('site.invoices')</h4><span class="text-muted mt-1 tx-13 mr-2 mb-0">/@lang('site.Invoice_printing_preview')</span>
+                <h4 class="content-title mb-0 my-auto">@lang('site.invoices')</h4><span
+                    class="text-muted mt-1 tx-13 mr-2 mb-0">/@lang('site.Invoice_printing_preview')</span>
             </div>
         </div>
 
@@ -53,13 +53,17 @@
                             <div class="col-md">
                                 <label class="tx-gray-600">@lang('site.invoice_information')</label>
                                 <p class="invoice-info-row"><span>@lang('site.invoice_number')</span>
-                                    <span>{{ $invoices->invoice_number }}</span></p>
+                                    <span>{{ $invoices->invoice_number }}</span>
+                                </p>
                                 <p class="invoice-info-row"><span> @lang('site.invoice_date')</span>
-                                    <span>{{ $invoices->invoice_date }}</span></p>
+                                    <span>{{ $invoices->invoice_date }}</span>
+                                </p>
                                 <p class="invoice-info-row"><span> @lang('site.invoice_due_date')</span>
-                                    <span>{{ $invoices->due_date }}</span></p>
+                                    <span>{{ $invoices->due_date }}</span>
+                                </p>
                                 <p class="invoice-info-row"><span>@lang('site.category')</span>
-                                    <span>{{ $invoices->categories->section_name }}</span></p>
+                                    <span>{{ $invoices->categories->section_name }}</span>
+                                </p>
                             </div>
                         </div>
                         <div class="table-responsive mg-t-40">
@@ -80,7 +84,7 @@
                                         <td class="tx-center">{{ number_format($invoices->amount_collection, 2) }}</td>
                                         <td class="tx-right">{{ number_format($invoices->amount_commission, 2) }}</td>
                                         @php
-                                        $total = $invoices->Amount_collection + $invoices->amount_commission ;
+                                            $total = $invoices->Amount_collection + $invoices->amount_commission;
                                         @endphp
                                         <td class="tx-right">
                                             {{ number_format($total, 2) }}
@@ -103,7 +107,8 @@
                                     </tr>
                                     <tr>
                                         <td class="tx-right">@lang('site.discount')</td>
-                                        <td class="tx-right" colspan="2"> {{ number_format($invoices->discount, 2) }}</td>
+                                        <td class="tx-right" colspan="2"> {{ number_format($invoices->discount, 2) }}
+                                        </td>
 
                                     </tr>
                                     <tr>
@@ -140,7 +145,7 @@
     <script type="text/javascript">
         function printDiv() {
             var originalContents = document.body.innerHTML;
-            document.body.innerHTML =  document.getElementById('print').innerHTML;;
+            document.body.innerHTML = document.getElementById('print').innerHTML;;
             window.print();
             document.body.innerHTML = originalContents;
             location.reload();

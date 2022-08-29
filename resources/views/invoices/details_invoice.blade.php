@@ -1,6 +1,4 @@
 @extends('layouts.master')
-@section('css')
-@endsection
 @section('title')
     @lang('site.invoice_details')
 @endsection
@@ -54,16 +52,16 @@
                 <div class="tabs-menu ">
                     <!-- Tabs -->
                     <ul class="nav panel-tabs">
-                        <li class=""><a href="#tab11" class="active" data-toggle="tab"><i class="fa fa-laptop"></i>
-                                @lang('site.invoice_details')</a></li>
-                        <li><a href="#tab12" data-toggle="tab"><i class="fa fa-cube"></i> @lang('site.invoice_status')</a></li>
-                        <li><a href="#tab13" data-toggle="tab"><i class="fa fa-cogs"></i> @lang('site.invoice_attachments')</a></li>
+                        <li><a href="#tab11" class="active" data-toggle="tab"><i class="fa fa-laptop"></i> @lang('site.invoice_details')</a></li>
+                        <li><a href="#tab12" class="" data-toggle="tab"><i class="fa fa-cube"  ></i> @lang('site.invoice_status')</a></li>
+                        <li><a href="#tab13" class="" data-toggle="tab"><i class="fa fa-cogs"  ></i> @lang('site.invoice_attachments')</a></li>
                     </ul>
                 </div>
             </div>
             <div class="panel-body tabs-menu-body">
                 <div class="tab-content">
-                    <div class="tab-pane active" id="tab11">
+
+                    <div class="tab-pane active table-responsive" id="tab11">
                         <table class="table table-striped" style="text-align: center">
                             <tbody>
                                 <tr>
@@ -116,7 +114,8 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="tab-pane" id="tab12">
+                    
+                    <div class="tab-pane table-responsive" id="tab12">
                         <table class="table table-striped" style="text-align: center">
                             <thead>
                                 <tr class="text-dark">
@@ -159,7 +158,8 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="tab-pane" id="tab13">
+
+                    <div class="tab-pane table-responsive" id="tab13">
 
                         <form action="{{ route('attachment.store') }}" method="post" enctype="multipart/form-data"
                             class="col-sm-12 col-md-12 m-5">
@@ -222,6 +222,7 @@
 
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>

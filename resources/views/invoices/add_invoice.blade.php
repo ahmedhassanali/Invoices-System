@@ -32,7 +32,7 @@
 @endsection
 
 @section('content')
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
     @if (session()->has('Add'))
         <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -60,7 +60,8 @@
             <div class="card">
                 <div class="card-body">
 
-                    <form action="{{ route('invoices.store') }}" method="post" enctype="multipart/form-data" autocomplete="off">
+                    <form action="{{ route('invoices.store') }}" method="post" enctype="multipart/form-data"
+                        autocomplete="off">
                         @csrf
 
                         {{-- 1 --}}
@@ -133,7 +134,7 @@
                                 <label for="inputName" class="control-label">@lang('site.VAT_rate')</label></label>
                                 <select name="rate_vat" id="rate_vat" class="form-control" onchange="myFunction()">
                                     <!--placeholder-->
-                                    <option value=" 5%">5%</option>
+                                    <option value="5%">5%</option>
                                     <option value="10%">10%</option>
                                 </select>
                             </div>
@@ -228,21 +229,21 @@
                 if (section_id) {
                     $.ajax({
                         // url: '/section/'+ section_id,
-                        url: 'https://invoices-sys.herokuapp.com/ar/section/'+section_id,
+                        url: 'https://invoices-sys.herokuapp.com/ar/section/' + section_id,
                         type: "GET",
                         dataType: "json",
                         success: function(data) {
                             $('select[name="product"]').empty();
                             $.each(data, function(key, value) {
-                                $("select[name='product']").append
-                                (
-                                    '<option value="' + value + '">' + value +'</option>'
+                                $("select[name='product']").append(
+                                    '<option value="' + value + '">' + value +
+                                    '</option>'
                                 );
                             });
                         },
 
                     });
-             
+
                 } else {
                     console.log('AJAX load did not work');
                 }
@@ -250,7 +251,7 @@
         });
     </script>
 
-    
+
 
     <script>
         function myFunction() {

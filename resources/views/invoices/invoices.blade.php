@@ -51,8 +51,8 @@
 
     <div class="row mt-3">
 
-        <a class=" btn btn-primary col-2 m-2" href="invoices/create">@lang('site.add_invoice')</a>
-        <a class=" btn btn-primary col-2 m-2" href="invoices/export">@lang('site.export_excel')</a>
+        <a class=" btn btn-primary col-4 m-2" href="invoices/create">@lang('site.add_invoice')</a>
+        <a class=" btn btn-primary col-4 m-2" href="invoices/export">@lang('site.export_excel')</a>
     </div>
     <!-- row -->
     <div class="row">
@@ -139,8 +139,8 @@
                                                     class="las la-pen"></i>@lang('site.print_invoice')</a>
 
                                             <a class="btn btn-sm btn-info mt-1"
-                                            href="{{ url('invoicesDetails') }}/{{ $invoice->id }} "><i
-                                            class="las la-pen"></i>@lang('site.invoice_details')</a>
+                                                href="{{ url('invoicesDetails') }}/{{ $invoice->id }} "><i
+                                                    class="las la-pen"></i>@lang('site.invoice_details')</a>
                                         </td>
                                     </tr>
                                     @php

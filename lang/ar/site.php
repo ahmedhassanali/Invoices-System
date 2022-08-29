@@ -1,5 +1,6 @@
 <?php
 return [
+
     'no_data_found' => 'لايوجد اى سجلات',
     'login' => 'تسجيل الدخول',
     'dashboard' => 'الرئيسية',
@@ -16,24 +17,20 @@ return [
     'invoices_reports' => 'تقارير الفواتير',
     'users' => 'المستخدمين',
     'user' => 'المستخدم',
-    'delete_attachment'=>'حذف مرفق',
-    'downlode'=>'تحميل',
-
-    'collection_invoice'=>'فاتورت صارف',
-    'invoice_information'=>'معلومات الفاتورة',
-    'collection_amount'=>'مبلغ التحصيل',
-    'print'=>'طباعة',
-    'invoice_details'=>'تفاصيل الفاتورة ',
-    'invoice_status'=>'حاله الفاتورة',
-    'add_attachment'=>'اضافة مرفق',
-    'file_name'=>'اسم الملف',
-    'user_add'=>'من قبل المستخدم',
-    'add_date'=>'تاريخ الاضافة',
-    'invoice_attachments'=>'مرفقات الفاتورة',
-    'archive'=>'الارشيف',
-
-
-
+    'delete_attachment' => 'حذف مرفق',
+    'downlode' => 'تحميل',
+    'collection_invoice' => 'فاتورت صارف',
+    'invoice_information' => 'معلومات الفاتورة',
+    'collection_amount' => 'مبلغ التحصيل',
+    'print' => 'طباعة',
+    'invoice_details' => 'تفاصيل الفاتورة ',
+    'invoice_status' => 'حاله الفاتورة',
+    'add_attachment' => 'اضافة مرفق',
+    'file_name' => 'اسم الملف',
+    'user_add' => 'من قبل المستخدم',
+    'add_date' => 'تاريخ الاضافة',
+    'invoice_attachments' => 'مرفقات الفاتورة',
+    'archive' => 'الارشيف',
     'users_list' => 'قائمة المستخدمين ',
     'users_roles' => 'صلاحيات المستخدمين',
     'categories' => 'الاقسام',
@@ -58,17 +55,14 @@ return [
     'add_product' => 'اضافة منتج',
     'close' => 'اغلاق',
     'update_category' => 'تعديل القسم',
-
     'Are_product_deleted' => 'هل انت متاكد من حذف هذا المنتج',
     'Are_invoice_deleted' => 'هل انت متاكد من حذف هذه الفاتورة',
     'Are_atta_deleted' => 'هل انت متاكد من حذف هذه المرفق',
-    'export_excel'=>'تصدير الاكسل',
-
+    'export_excel' => 'تصدير الاكسل',
     'Are_invoice_archive' => 'هل انت متاكد من ارشفت هذه الفاتورة',
     'Are_cancel_invoice_archive' => 'هل انت متاكد من  الغاء ارشفت هذه الفاتورة',
     'Are_category_deleted' => 'هل انت متاكد من حذف هذا القسم',
     'Are_user_deleted' => 'هل انت متاكد من حذف هذا المنتج',
-
     'category_delete' => 'حذف القسم',
     'product_name' => 'اسم المنتج',
     'update_product' => 'تعديل المنتج',
@@ -101,7 +95,6 @@ return [
     'archive_successfully' => 'تم الارشفة بنجاح',
     'cancel_archive_successfully' => 'تم  الغاء الارشفة بنجاح',
     'cancel_archive' => '  الغاء الارشفة',
-
     'invoice_type' => 'نوع الفاتورة',
     'permissions' => 'الصلاحيات',
     'proudects' => 'منتجات',
@@ -135,7 +128,7 @@ return [
     'role_name' => 'اسم الصلاحية',
     'add_role' => ' اضافة صلاحية',
     'view_role' => 'عرض صلاحية',
-
+    'add_category' => 'اضاقة قسم',
     'invoice_number' => 'رقم الفاتورة',
     'to_date' => 'من تاريخ',
     'from_date' => 'الي تاريخ',
@@ -146,15 +139,6 @@ return [
     'archive_invoices' => 'الفواتير المؤرشفة',
     'print_invoice' => 'طباعة فاتورة',
     'archive' => 'ارشقة',
-
-    'ar' => [
-        'name' => 'الاسم باللغة العربية',
-        'description' => 'الوصف باللغة العربية',
-    ],
-
-    'en' => [
-        'name' => 'الاسم باللغة الانجليزية',
-        'description' => 'الوصف بالغة الانجليزية',
-    ],
+    'update_user'=>'تعديل بيانات المستخدم',
 
 ];

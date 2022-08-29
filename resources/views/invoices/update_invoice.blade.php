@@ -95,8 +95,8 @@
                                         {{ $invoice->categories->section_name }}
                                     </option>
                                     @foreach ($sections as $section)
-                                        @if ($invoice->categories->id  != $section->id  )       
-                                        <option value="{{ $section->id }}"> {{ $section->section_name }}</option>
+                                        @if ($invoice->categories->id != $section->id)
+                                            <option value="{{ $section->id }}"> {{ $section->section_name }}</option>
                                         @endif
                                     @endforeach
                                 </select>
@@ -236,7 +236,7 @@
                 if (SectionId) {
                     $.ajax({
                         // url: "{{ URL::to('section') }}/" + SectionId,
-                        url: 'https://invoices-sys.herokuapp.com/ar/section/'+SectionId,
+                        url: 'https://invoices-sys.herokuapp.com/ar/section/' + SectionId,
 
                         type: "GET",
                         dataType: "json",
