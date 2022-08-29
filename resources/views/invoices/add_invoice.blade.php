@@ -18,6 +18,8 @@
 @stop
 
 @section('page-header')
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+
     <!-- breadcrumb -->
     <div class="breadcrumb-header justify-content-between">
         <div class="my-auto">
