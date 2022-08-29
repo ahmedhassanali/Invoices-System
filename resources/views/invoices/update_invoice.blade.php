@@ -233,7 +233,9 @@
                 var SectionId = $(this).val();
                 if (SectionId) {
                     $.ajax({
-                        url: "{{ URL::to('section') }}/" + SectionId,
+                        // url: "{{ URL::to('section') }}/" + SectionId,
+                        url: 'https://invoices-sys.herokuapp.com/ar/section/'+SectionId,
+
                         type: "GET",
                         dataType: "json",
                         success: function(data) {
