@@ -60,7 +60,7 @@
             <div class="card">
                 <div class="card-body">
 
-                    <form action="invoices/store" method="post" enctype="multipart/form-data" autocomplete="off">
+                    <form action="{{ route('invoices.store') }}" method="post" enctype="multipart/form-data" autocomplete="off">
                         @csrf
 
                         {{-- 1 --}}
@@ -227,7 +227,6 @@
                 var section_id = $(this).val();
                 if (section_id) {
                     $.ajax({
-                        // url: "{{ URL::to('section') }}/" + SectionId,
                         // url: '/section/'+ section_id,
                         url: 'https://invoices-sys.herokuapp.com/ar/section/'+section_id,
                         type: "GET",
