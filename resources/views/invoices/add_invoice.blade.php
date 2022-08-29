@@ -229,7 +229,7 @@
                     $.ajax({
                         // url: "{{ URL::to('section') }}/" + SectionId,
                         // url: '/section/'+ section_id,
-                        url: 'https://invoices-sys.herokuapp.com/ar/section/'+section_id
+                        url: 'https://invoices-sys.herokuapp.com/ar/section/'+section_id,
                         type: "GET",
                         dataType: "json",
                         success: function(data) {
