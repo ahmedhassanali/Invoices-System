@@ -166,14 +166,14 @@
 											<thead>
 												<tr>
 													<th class="border-bottom-0">#</th>
-													<th class="border-bottom-0"> @lang('site.invoice_number')</th>
-													<th class="border-bottom-0"> @lang('site.invoice_date')</th>
-													<th class="border-bottom-0"> @lang('site.invoice_due_date')</th>
+													<th class="border-bottom-0">@lang('site.invoice_number')</th>
+													<th class="border-bottom-0">@lang('site.invoice_date')</th>
+													<th class="border-bottom-0">@lang('site.invoice_due_date')</th>
 													<th class="border-bottom-0">@lang('site.product')</th>
 													<th class="border-bottom-0">@lang('site.category')</th>
 													<th class="border-bottom-0">@lang('site.discount')</th>
-													<th class="border-bottom-0"> @lang('site.VAT_rate')</th>
-													<th class="border-bottom-0"> @lang('site.VAT')</th>
+													<th class="border-bottom-0">@lang('site.VAT_rate')</th>
+													<th class="border-bottom-0">@lang('site.VAT')</th>
 													<th class="border-bottom-0">@lang('site.total')</th>
 													<th class="border-bottom-0">@lang('site.status')</th>
 													<th class="border-bottom-0">@lang('site.notes')</th>
