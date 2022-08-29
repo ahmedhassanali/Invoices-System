@@ -65,19 +65,19 @@
 
                         {{-- 1 --}}
                         <div class="row">
-                            <div class="col">
+                            <div class="col-sm-6 col-md-4">
                                 <label for="inputName" class="control-label">@lang('site.invoice_num')</label>
                                 <input type="text" class="form-control" id="inputName" name="invoice_number"
                                     title=" " required>
                             </div>
 
-                            <div class="col">
+                            <div class="col-sm-6 col-md-4">
                                 <label>@lang('site.invoice_date')</label>
                                 <input class="form-control fc-datepicker" name="invoice_date" placeholder="YYYY-MM-DD"
                                     type="text" value="{{ date('Y-m-d') }}" required>
                             </div>
 
-                            <div class="col">
+                            <div class="col-sm-6 col-md-4">
                                 <label>@lang('site.invoice_due_date')</label>
                                 <input class="form-control fc-datepicker" name="due_date" placeholder="YYYY-MM-DD"
                                     type="text" required>
@@ -87,7 +87,7 @@
 
                         {{-- 2 --}}
                         <div class="row">
-                            <div class="col">
+                            <div class="col-sm-6 col-md-4">
                                 <label for="inputName" class="control-label">@lang('site.category')</label>
                                 <select name="Section" class="form-control " onclick="console.log($(this).val())"
                                     onchange="console.log('change is firing')">
@@ -98,13 +98,13 @@
                                 </select>
                             </div>
 
-                            <div class="col">
+                            <div class="col-sm-6 col-md-4">
                                 <label for="inputName" class="control-label">@lang('site.product')</label>
                                 <select id="product" name="product" class="form-control">
                                 </select>
                             </div>
 
-                            <div class="col">
+                            <div class="col-sm-6 col-md-4">
                                 <label for="inputName" class="control-label">@lang('site.total_amount')</label>
                                 <input type="text" class="form-control" id="inputName" name="amount_collection"
                                     oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
@@ -113,7 +113,7 @@
 
                         {{-- 3 --}}
                         <div class="row">
-                            <div class="col">
+                            <div class="col-sm-6 col-md-4">
                                 <label for="inputName" class="control-label">@lang('site.commission_amount')</label>
                                 <input type="text" class="form-control form-control-lg" id="amount_commission"
                                     name="amount_commission" title=""
@@ -121,7 +121,7 @@
                                     required>
                             </div>
 
-                            <div class="col">
+                            <div class="col-sm-6 col-md-4">
                                 <label for="inputName" class="control-label">@lang('site.discount')</label>
                                 <input type="text" class="form-control form-control-lg" id="discount" name="discount"
                                     title=""
@@ -129,7 +129,7 @@
                                     value=0 required>
                             </div>
 
-                            <div class="col">
+                            <div class="col-sm-6 col-md-4">
                                 <label for="inputName" class="control-label">@lang('site.VAT_rate')</label></label>
                                 <select name="rate_vat" id="rate_vat" class="form-control" onchange="myFunction()">
                                     <!--placeholder-->
@@ -142,12 +142,12 @@
 
                         {{-- 4 --}}
                         <div class="row">
-                            <div class="col">
+                            <div class="col-sm-6 ">
                                 <label for="inputName" class="control-label">@lang('site.VAT')</label>
                                 <input type="text" class="form-control" id="value_vat" name="value_vat" readonly>
                             </div>
 
-                            <div class="col">
+                            <div class="col-sm-6 ">
                                 <label for="inputName" class="control-label">@lang('site.total_with_VAT')</label>
                                 <input type="text" class="form-control" id="total" name="total" readonly>
                             </div>
@@ -155,7 +155,7 @@
 
                         {{-- 5 --}}
                         <div class="row">
-                            <div class="col">
+                            <div class="col-sm-12 ">
                                 <label for="exampleTextarea">@lang('site.notes')</label>
                                 <textarea class="form-control" id="exampleTextarea" name="note" rows="3"></textarea>
                             </div>
