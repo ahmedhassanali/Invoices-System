@@ -226,8 +226,8 @@
                 if (section_id) {
                     $.ajax({
                         // url: "{{ URL::to('section') }}/" + SectionId,
-                        url: '/section/'+ section_id,
-
+                        // url: '/section/'+ section_id,
+                        url: 'https://invoices-sys.herokuapp.com/ar/section/'+section_id. 
                         type: "GET",
                         dataType: "json",
                         success: function(data) {
@@ -241,6 +241,13 @@
                         },
 
                     });
+                            .done(function($data) {
+                    alert('All good!');
+                })
+                .fail(function($data){
+                    alert('Error, see log data');
+                    console.log($data);
+                })
                 } else {
                     console.log('AJAX load did not work');
                 }
