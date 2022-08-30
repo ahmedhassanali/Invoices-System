@@ -19,7 +19,7 @@ return [
     'user' => 'المستخدم',
     'delete_attachment' => 'حذف مرفق',
     'downlode' => 'تحميل',
-    'collection_invoice' => 'فاتورت صارف',
+    'collection_invoice' => 'فاتورة صرف',
     'invoice_information' => 'معلومات الفاتورة',
     'collection_amount' => 'مبلغ التحصيل',
     'print' => 'طباعة',
@@ -140,5 +140,5 @@ return [
     'print_invoice' => 'طباعة فاتورة',
     'archive' => 'ارشقة',
     'update_user'=>'تعديل بيانات المستخدم',
-
+    'invoice_printing_preview'=>'عرض الفاتورة قبل الطباعة'
 ];
