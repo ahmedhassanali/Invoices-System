@@ -140,5 +140,5 @@ return [
     'print_invoice' => 'طباعة فاتورة',
     'archive' => 'ارشقة',
     'update_user'=>'تعديل بيانات المستخدم',
-    'invoice_printing_preview'=>'عرض الفاتورة قبل الطباعة'
+    'Invoice_printing_preview'=>'عرض الفاتورة قبل الطباعة'
 ];
