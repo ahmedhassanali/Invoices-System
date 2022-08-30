@@ -20,11 +20,11 @@
                         <div class="row">
                             <div class="col-md-10 col-lg-10 col-xl-9 mx-auto">
                                 <div class="card-sigin">
-                                    <div class="mb-5  d-flex align-items-center justify-content-center">
-                                       
-
-                                            <a href="{{ url('/' . $page='Home') }}"><img src="{{URL::asset('assets/img/brand/favicon.png')}}" class="sign-favicon ht-55 mx-1 my-1 " alt="logo"></a>
-                                        <h1 class="main-logo1 ml-1 mr-0 my-auto tx-28">Invoices <span>System</span></h1>
+                                    <div class="mb-4  d-flex ">
+                                        <a href="{{ url('/' . ($page = 'Home')) }}"><img
+                                                src="{{ URL::asset('assets/img/brand/favicon.png') }}"
+                                                class="sign-favicon ht-50 mx-1 my-1 " alt="logo"></a>
+                                        <h1 class="main-logo1 ml-1 mr-0 my-auto tx-28" >Invoices <span>System</span></h1>
                                     </div>
                                     <div class="card-sigin">
                                         <div class="main-signup-header">
@@ -74,33 +74,33 @@
                                                     {{ __('تسجيل الدخول') }}
                                                 </button>
                                             </form>
-                                            
+
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div><!-- End -->
-                    
+
                 </div>
             </div><!-- End -->
-            
+
             <div class="col-md-6 col-lg-6 col-xl-7 d-none d-md-flex bg-primary-transparent">
                 <div class="row wd-100p mx-auto text-center">
                     <div class="col-md-12 col-lg-12 col-xl-12 my-auto mx-auto wd-100p">
                         <img src="{{ URL::asset('assets/img/media/login.svg') }}"
-                        class="my-auto ht-xl-80p wd-md-100p wd-xl-80p mx-auto" alt="logo">
+                            class="my-auto ht-xl-80p wd-md-100p wd-xl-80p mx-auto" alt="logo">
                     </div>
                 </div>
             </div>
-            
-        </div>
-        
 
-        
+        </div>
+
+
+
     </div>
 
-        @include('layouts.footer')
+    @include('layouts.footer')
 @endsection
 @section('js')
 @endsection
