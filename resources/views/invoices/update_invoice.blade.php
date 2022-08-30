@@ -63,20 +63,20 @@
                         {{ csrf_field() }}
                         {{-- 1 --}}
                         <div class="row">
-                            <div class="col">
+                           <div class="col-sm-6 col-md-4">
                                 <label for="inputName" class="control-label">@lang('site.invoice_number')</label>
                                 <input type="hidden" name="invoice_id" value="{{ $invoice->id }}">
                                 <input type="text" class="form-control" id="inputName" name="invoice_number"
                                     title="" value="{{ $invoice->invoice_number }}" required>
                             </div>
 
-                            <div class="col">
+                           <div class="col-sm-6 col-md-4">
                                 <label>@lang('site.invoice_date')</label>
                                 <input class="form-control fc-datepicker" name="invoice_Date" placeholder="YYYY-MM-DD"
                                     type="text" value="{{ $invoice->invoice_date }}" required>
                             </div>
 
-                            <div class="col">
+                           <div class="col-sm-6 col-md-4">
                                 <label>@lang('site.invoice_due_date')</label>
                                 <input class="form-control fc-datepicker" name="Due_date" placeholder="YYYY-MM-DD"
                                     type="text" value="{{ $invoice->due_date }}" required>
@@ -86,7 +86,7 @@
 
                         {{-- 2 --}}
                         <div class="row">
-                            <div class="col">
+                           <div class="col-sm-6 col-md-4">
                                 <label for="inputName" class="control-label">@lang('site.category')</label>
                                 <select name="Section" class="form-control SlectBox" onclick="console.log($(this).val())"
                                     onchange="console.log('change is firing')">
@@ -102,14 +102,14 @@
                                 </select>
                             </div>
 
-                            <div class="col">
+                           <div class="col-sm-6 col-md-4">
                                 <label for="inputName" class="control-label">@lang('site.product')</label>
                                 <select id="product" name="product" class="form-control">
                                     <option value="{{ $invoice->product }}"> {{ $invoice->product }}</option>
                                 </select>
                             </div>
 
-                            <div class="col">
+                           <div class="col-sm-6 col-md-4">
                                 <label for="inputName" class="control-label">@lang('site.collection_amount')</label>
                                 <input type="text" class="form-control" id="inputName" name="Amount_collection"
                                     oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
@@ -122,7 +122,7 @@
 
                         <div class="row">
 
-                            <div class="col">
+                           <div class="col-sm-6 col-md-4">
                                 <label for="inputName" class="control-label">@lang('site.commission_amount')</label>
                                 <input type="text" class="form-control form-control-lg" id="Amount_Commission"
                                     name="Amount_Commission" title=""
@@ -130,7 +130,7 @@
                                     value="{{ $invoice->amount_commission }}" required>
                             </div>
 
-                            <div class="col">
+                           <div class="col-sm-6 col-md-4">
                                 <label for="inputName" class="control-label">@lang('site.discount')</label>
                                 <input type="text" class="form-control form-control-lg" id="Discount"
                                     name="Discount" title=" "
@@ -138,7 +138,7 @@
                                     value="{{ $invoice->discount }}" required>
                             </div>
 
-                            <div class="col">
+                           <div class="col-sm-6 col-md-4">
                                 <label for="inputName" class="control-label"> @lang('site.VAT_rate')</label>
                                 <select name="Rate_VAT" id="Rate_VAT" class="form-control" onchange="myFunction()">
                                     <!--placeholder-->
@@ -154,13 +154,13 @@
                         {{-- 4 --}}
 
                         <div class="row">
-                            <div class="col">
+                            <div class="col-sm-6 col-md-4">
                                 <label for="inputName" class="control-label">@lang('site.VAT')</label>
                                 <input type="text" class="form-control" id="Value_VAT" name="Value_VAT"
                                     value="{{ $invoice->value_vat }}" readonly>
                             </div>
 
-                            <div class="col">
+                           <div class="col-sm-6 col-md-4">
                                 <label for="inputName" class="control-label">@lang('site.total_with_VAT')</label>
                                 <input type="text" class="form-control" id="Total" name="Total" readonly
                                     value="{{ $invoice->total }}">
@@ -169,7 +169,7 @@
 
                         {{-- 5 --}}
                         <div class="row">
-                            <div class="col">
+                           <div class="col-sm-6 col-md-4">
                                 <label for="exampleTextarea">@lang('site.notes')</label>
                                 <textarea class="form-control" id="exampleTextarea" name="note" rows="3">
                                 {{ $invoice->note }}</textarea>

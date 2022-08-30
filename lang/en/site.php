@@ -151,6 +151,7 @@ return [
     'stock' => 'Stock',
     'profit_percent' => 'Profit Percent',
     'update_user'=>'Update User',
-    'Invoice_printing_preview'=>'Invoice Printing Preview'
+    'Invoice_printing_preview'=>'Invoice Printing Preview',
+    'update_invoice'=>'Update Invoice',
 
 ];

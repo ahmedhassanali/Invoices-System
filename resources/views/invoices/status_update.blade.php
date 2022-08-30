@@ -27,20 +27,20 @@
                         {{ csrf_field() }}
                         {{-- 1 --}}
                         <div class="row">
-                            <div class="col">
+                            <div class="col-sm-6 col-md-4">
                                 <label for="inputName" class="control-label">@lang('site.invoice_number')</label>
                                 <input type="hidden" name="invoice_id" value="{{ $invoices->id }}">
                                 <input type="text" class="form-control" id="inputName" name="invoice_number"
                                     title="" value="{{ $invoices->invoice_number }}" required readonly>
                             </div>
 
-                            <div class="col">
+                            <div class="col-sm-6 col-md-4">
                                 <label>@lang('site.invoice_date')</label>
                                 <input class="form-control fc-datepicker" name="invoice_Date" placeholder="YYYY-MM-DD"
                                     type="text" value="{{ $invoices->invoice_date }}" required readonly>
                             </div>
 
-                            <div class="col">
+                            <div class="col-sm-6 col-md-4">
                                 <label>@lang('site.invoice_due_date')</label>
                                 <input class="form-control fc-datepicker" name="Due_date" placeholder="YYYY-MM-DD"
                                     type="text" value="{{ $invoices->due_date }}" required readonly>
@@ -50,7 +50,7 @@
 
                         {{-- 2 --}}
                         <div class="row">
-                            <div class="col">
+                            <div class="col-sm-6 col-md-4">
                                 <label for="inputName" class="control-label">@lang('site.category')</label>
                                 <select name="Section" class="form-control SlectBox" onclick="console.log($(this).val())"
                                     onchange="console.log('change is firing')" readonly>
@@ -62,14 +62,14 @@
                                 </select>
                             </div>
 
-                            <div class="col">
+                            <div class="col-sm-6 col-md-4">
                                 <label for="inputName" class="control-label">@lang('site.producte')</label>
                                 <select id="product" name="product" class="form-control" readonly>
                                     <option value="{{ $invoices->product }}"> {{ $invoices->product }}</option>
                                 </select>
                             </div>
 
-                            <div class="col">
+                            <div class="col-sm-6 col-md-4">
                                 <label for="inputName" class="control-label">@lang('site.collection amount')</label>
                                 <input type="text" class="form-control" id="inputName" name="Amount_collection"
                                     oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
@@ -82,21 +82,21 @@
 
                         <div class="row">
 
-                            <div class="col">
+                            <div class="col-sm-6 col-md-4">
                                 <label for="inputName" class="control-label"> @lang('site.commission_amount')</label>
                                 <input type="text" class="form-control form-control-lg" id="Amount_Commission"
                                     oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
                                     value="{{ $invoices->amount_commission }}" required readonly>
                             </div>
 
-                            <div class="col">
+                            <div class="col-sm-6 col-md-4">
                                 <label for="inputName" class="control-label">@lang('site.discount')</label>
                                 <input type="text" class="form-control form-control-lg" id="Discount" name="Discount"
                                     oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
                                     value="{{ $invoices->discount }}" required readonly>
                             </div>
 
-                            <div class="col">
+                            <div class="col-sm-6 col-md-4">
                                 <label for="inputName" class="control-label">@lang('site.VAT_rate')</label>
                                 <select name="Rate_VAT" id="Rate_VAT" class="form-control" onchange="myFunction()"
                                     readonly>
@@ -111,13 +111,13 @@
                         {{-- 4 --}}
 
                         <div class="row">
-                            <div class="col">
+                            <div class="col-sm-6 col-md-4">
                                 <label for="inputName" class="control-label">@lang('site.VAT')</label>
                                 <input type="text" class="form-control" id="Value_VAT" name="Value_VAT"
                                     value="{{ $invoices->value_vat }}" readonly>
                             </div>
 
-                            <div class="col">
+                            <div class="col-sm-6 col-md-4">
                                 <label for="inputName" class="control-label">@lang('site.total_with_VAT')</label>
                                 <input type="text" class="form-control" id="Total" name="Total" readonly
                                     value="{{ $invoices->total }}">
@@ -126,7 +126,7 @@
 
                         {{-- 5 --}}
                         <div class="row">
-                            <div class="col">
+                            <div class="col-sm-6 col-md-4">
                                 <label for="exampleTextarea">@lang('site.notes')</label>
                                 <textarea class="form-control" id="exampleTextarea" name="note" rows="3" readonly>
                                 {{ $invoices->note }}</textarea>
@@ -134,7 +134,7 @@
                         </div><br>
 
                         <div class="row">
-                            <div class="col">
+                            <div class="col-sm-6 col-md-4">
                                 <label for="exampleTextarea">@lang('site.invoice_status')</label>
                                 <select class="form-control" id="Status" name="Status" required>
                                     <option selected="true" disabled="disabled">-- paid status --</option>
@@ -143,7 +143,7 @@
                                 </select>
                             </div>
 
-                            <div class="col">
+                            <div class="col-sm-6 col-md-4">
                                 <label>@lang('site.invoice_date')</label>
                                 <input class="form-control fc-datepicker" name="Payment_Date" placeholder="YYYY-MM-DD"
                                     type="text" required>

@@ -134,11 +134,12 @@ return [
     'from_date' => 'من تاريخ',
     'status' => 'الحالة',
     'update_status' => 'تعديل الحالة',
+    'update_invoice'=>'تعديل الفاتورة',
     'delete_invoice' => 'حذف فاتورة',
     'archive_invoice' => 'ارشيف فاتورة',
     'archive_invoices' => 'الفواتير المؤرشفة',
     'print_invoice' => 'طباعة فاتورة',
     'archive' => 'ارشقة',
     'update_user'=>'تعديل بيانات المستخدم',
-    'Invoice_printing_preview'=>'عرض الفاتورة قبل الطباعة'
+    'Invoice_printing_preview'=>'عرض الفاتورة قبل الطباعة',
 ];
