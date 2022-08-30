@@ -208,15 +208,12 @@ class InvoicesController extends Controller
     public function destroy_archive(Request $request)
     {
 
-        // $id=$request->invoice_id;
-
-        // $invoices =invoices::withTrashed()->where('id',$id)->first();
-        // $invoices->forceDelete();
-        // invoices::find($id)->forceDelete();
-
-        // session()->flash('delete','');
-        // return redirect('/invoices');
-        return $request;
+        $id=$request->invoice_id;
+        $invoice =invoices::withTrashed()->where('id',$id)->first();
+        $invoice->forceDelete();
+        session()->flash('delete','');
+        return redirect('/invoices');
+        
     } //end of destroy_archive
 
     public function print($id)
