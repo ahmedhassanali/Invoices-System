@@ -146,9 +146,9 @@
                             data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
                     </div>
                     <div class="modal-body">
-                        <form action={{ route('destroy_archive') }}  method="post">
+                        <form action={{ route('destroy_archive','') }}  method="post">
                             @csrf
-                            {{ method_field('delete') }}
+                            @method('delete')
 
                             <div class="form-group">
                                 <input type="hidden" name="invoice_id" id="invoice_id" value="">
