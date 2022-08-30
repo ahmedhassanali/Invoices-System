@@ -147,7 +147,7 @@
                     </div>
                     <div class="modal-body">
                         <form action='invoice/destroy_archive' method="post">
-                            {{ method_field('delete') }}
+                            {{-- {{ method_field('delete') }} --}}
                             {{ csrf_field() }}
 
                             <div class="form-group">
