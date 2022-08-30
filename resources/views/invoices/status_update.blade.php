@@ -63,14 +63,14 @@
                             </div>
 
                             <div class="col-sm-6 col-md-4">
-                                <label for="inputName" class="control-label">@lang('site.producte')</label>
+                                <label for="inputName" class="control-label">@lang('site.product')</label>
                                 <select id="product" name="product" class="form-control" readonly>
                                     <option value="{{ $invoices->product }}"> {{ $invoices->product }}</option>
                                 </select>
                             </div>
 
                             <div class="col-sm-6 col-md-4">
-                                <label for="inputName" class="control-label">@lang('site.collection amount')</label>
+                                <label for="inputName" class="control-label">@lang('site.collection_amount')</label>
                                 <input type="text" class="form-control" id="inputName" name="Amount_collection"
                                     oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
                                     value="{{ $invoices->amount_collection }}" readonly>
@@ -137,7 +137,7 @@
                             <div class="col-sm-6 col-md-4">
                                 <label for="exampleTextarea">@lang('site.invoice_status')</label>
                                 <select class="form-control" id="Status" name="Status" required>
-                                    <option selected="true" disabled="disabled">-- paid status --</option>
+                                    <option selected="true" disabled="disabled">paid status</option>
                                     <option value="paid">paid</option>
                                     <option value="partiallyPaid">partiallyPaid</option>
                                 </select>
