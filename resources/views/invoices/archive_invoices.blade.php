@@ -146,7 +146,7 @@
                             data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
                     </div>
                     <div class="modal-body">
-                        <form action="{{ route('invoice/destroy_archive', 'test') }}" method="post">
+                        <form action='invoice/destroy_archive' method="post">
                             {{ method_field('delete') }}
                             {{ csrf_field() }}
 
