@@ -142,4 +142,5 @@ return [
     'archive' => 'ارشقة',
     'update_user'=>'تعديل بيانات المستخدم',
     'Invoice_printing_preview'=>'عرض الفاتورة قبل الطباعة',
+    'logout'=>'تسجيل الخروج',
 ];

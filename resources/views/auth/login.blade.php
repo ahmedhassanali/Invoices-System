@@ -20,8 +20,10 @@
                         <div class="row">
                             <div class="col-md-10 col-lg-10 col-xl-9 mx-auto">
                                 <div class="card-sigin">
-                                    <div class="mb-5 ">
-                                        <a href="{{ url('/' . $page='Home') }}"><img src="{{URL::asset('assets/img/brand/favicon.png')}}" class="sign-favicon ht-40 mx-2" alt="logo"></a>
+                                    <div class="mb-5">
+                                       
+
+                                            <a href="{{ url('/' . $page='Home') }}"><img src="{{URL::asset('assets/img/brand/favicon.png')}}" class="sign-favicon ht-55 mx-1 my-1 " alt="logo"></a>
                                         <h1 class="main-logo1 ml-1 mr-0 my-auto tx-28">Invoices <span>System</span></h1>
                                     </div>
                                     <div class="card-sigin">
