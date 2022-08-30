@@ -50,7 +50,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale() , 'middleware' => [ '
         Route::get('reports',[InvoicesController::class,'reports'])->name('reports');
         Route::get('invoice_report',[InvoicesController::class,'invoice_report'])->name('invoice_report');
         
-        Route::post('invoice/destroy_archive',[InvoicesController::class,'destroy_archive'])->name('destroy_archive');
+        Route::post('invoice/destroy_archive/{id}',[InvoicesController::class,'destroy_archive'])->name('destroy_archive');
         Route::post('invoices/search_invoices',[InvoicesController::class,'search_invoices'])->name('search_invoices');
         Route::post('invoice/status_update/{id}',[InvoicesController::class,'statusUpdate'])->name('status_update');
         Route::post('delete_file',[InvoicesDetailsController::class,'destroy'])->name('delete_file');
