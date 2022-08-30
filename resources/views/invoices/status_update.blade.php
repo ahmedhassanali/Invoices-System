@@ -49,7 +49,7 @@
                         </div>
 
                         {{-- 2 --}}
-                        <div class="row">
+                        <div class="row mt-2">
                             <div class="col-sm-6 col-md-4">
                                 <label for="inputName" class="control-label">@lang('site.category')</label>
                                 <select name="Section" class="form-control SlectBox" onclick="console.log($(this).val())"
@@ -80,7 +80,7 @@
 
                         {{-- 3 --}}
 
-                        <div class="row">
+                        <div class="row mt-2">
 
                             <div class="col-sm-6 col-md-4">
                                 <label for="inputName" class="control-label"> @lang('site.commission_amount')</label>
@@ -110,7 +110,7 @@
 
                         {{-- 4 --}}
 
-                        <div class="row">
+                        <div class="row mt-2">
                             <div class="col-sm-6 col-md-4">
                                 <label for="inputName" class="control-label">@lang('site.VAT')</label>
                                 <input type="text" class="form-control" id="Value_VAT" name="Value_VAT"
@@ -125,7 +125,7 @@
                         </div>
 
                         {{-- 5 --}}
-                        <div class="row">
+                        <div class="row mt-2">
                             <div class="col-sm-6 col-md-4">
                                 <label for="exampleTextarea">@lang('site.notes')</label>
                                 <textarea class="form-control" id="exampleTextarea" name="note" rows="3" readonly>

@@ -64,8 +64,8 @@
                     <div class="col-lg-12 margin-tb">
                         <div class="pull-right">
                             @can('اضافة صلاحية')
-                                <a class="btn btn-primary btn-sm"
-                                    href="{{ route('roles.create') }}">@lang('site.add')</a>
+                                <a class="btn btn-primary col-12"
+                                    href="{{ route('roles.create') }}">@lang('site.add_role')</a>
                             @endcan
                         </div>
                     </div>
@@ -102,7 +102,7 @@
                                         @if ($role->name !== 'owner')
                                             @can('حذف صلاحية')
 
-                                            <a class="modal-effect btn btn-sm btn-danger" data-effect="effect-scale"
+                                            <a class="modal-effect btn  btn-danger" data-effect="effect-scale"
                                                 data-role_id="{{ $role->id }}"
                                                 data-toggle="modal" href="#modaldemo8" title="حذف"><i
                                                 class="las la-trash"></i>@lang('site.delete')</a>

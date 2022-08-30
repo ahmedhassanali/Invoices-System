@@ -45,7 +45,7 @@
             <div class="card-body">
                 <div class="col-lg-12 margin-tb">
                     <div class="pull-right">
-                        <a class="btn btn-primary btn-sm" href="{{ route('users.index') }}">رجوع</a>
+                        <a class="btn btn-primary " href="{{ route('users.index') }}">@lang('site.users')</a>
                     </div>
                 </div><br>
                 <form class="parsley-style-1" id="selectForm2" autocomplete="off" name="selectForm2"
@@ -103,8 +103,8 @@
                         </div>
                     </div>
 
-                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                        <button class="btn btn-main-primary pd-x-20" type="submit"> @lang('site.save')</button>
+                    <div class="col-xs-12 col-sm-12 col-md-2 text-center d-flex ">
+                        <button class="btn btn-main-primary pd-x-20  col-sm-12 " type="submit"> @lang('site.save')</button>
                     </div>
                 </form>
             </div>

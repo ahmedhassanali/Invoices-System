@@ -56,15 +56,18 @@
                 </div>
                 <div class="row">
                     <!-- col -->
-                    <div class="col-lg-4">
+                    <div class="col-lg-6">
                         <ul id="treeview1">
                             <li><a href="#">@lang('site.roles')</a>
                                 <ul>
                             </li>
                             @foreach($permission as $value)
-                            <label
-                                style="font-size: 16px;">{{ Form::checkbox('permission[]', $value->id, false, array('class' => 'name')) }}
-                                {{ $value->name }}</label>
+                            <label class="m-1" style="font-size: 16px;">
+                                
+                                {{ Form::checkbox('permission[]', $value->id, false, array('class' => 'name')) }}
+                                {{ $value->name }}
+
+                            </label>
 
                             @endforeach
                             </li>

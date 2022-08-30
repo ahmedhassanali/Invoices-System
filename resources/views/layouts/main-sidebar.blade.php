@@ -26,14 +26,14 @@
 
             <li class="slide mt-3">
                 <a class="side-menu__item" href="{{ url('/' . ($page = 'home')) }}">
-                    <img src="{{ asset('assets/img/icons/1.png') }}" style="width: 30px" class=" mx-2 nav-icon">
+                    <img src="{{ asset('assets/img/icons/1.png') }}" style="width: 25px" class=" mx-2 nav-icon">
                     <span class="side-menu__label">@lang('site.dashboard')</span></a>
             </li>
 
 
             <li class="slide my-3">
                 <a class="side-menu__item" data-toggle="slide" href="">
-                    <img src="{{ asset('assets/img/icons/2.png') }}" style="width: 30px" class=" mx-2 nav-icon">
+                    <img src="{{ asset('assets/img/icons/2.png') }}" style="width: 25px" class=" mx-2 nav-icon">
                     <span class="side-menu__label">@lang('site.invoices')</span><i class="angle fe fe-chevron-down"></i></a>
                 <ul class="slide-menu">
                     <li><a class="slide-item" href="{{ url('/' . ($page = 'invoices/create')) }}">
@@ -56,7 +56,7 @@
 
             <li class="slide my-3">
                 <a class="side-menu__item" data-toggle="slide" href="{{ url('/' . ($page = '#')) }}">
-                    <img src="{{ asset('assets/img/icons/3.png') }}" style="width: 30px" class=" mx-2 nav-icon">
+                    <img src="{{ asset('assets/img/icons/3.png') }}" style="width: 25px" class=" mx-2 nav-icon">
                     <span class="side-menu__label">@lang('site.reports')</span><i class="angle fe fe-chevron-down"></i></a>
                 <ul class="slide-menu">
                     <li><a class="slide-item" href="{{ url('/' . ($page = 'invoice_report')) }}">@lang('site.invoices_reports')
@@ -67,7 +67,7 @@
 
             <li class="slide my-3">
                 <a class="side-menu__item" data-toggle="slide" href="{{ url('/' . ($page = '#')) }}">
-                    <img src="{{ asset('assets/img/icons/4.png') }}" style="width: 30px" class=" mx-2 nav-icon">
+                    <img src="{{ asset('assets/img/icons/4.png') }}" style="width: 25px" class=" mx-2 nav-icon">
 
                     <span class="side-menu__label">@lang('site.users')</span><i class="angle fe fe-chevron-down"></i></a>
                 <ul class="slide-menu">
@@ -78,14 +78,14 @@
 
             <li class="slide my-3">
                 <a class="side-menu__item" href="{{ url('/' . ($page = 'categories')) }}">
-                    <img src="{{ asset('assets/img/icons/7.png') }}" style="width: 30px" class=" mx-2 nav-icon">
+                    <img src="{{ asset('assets/img/icons/7.png') }}" style="width: 25px" class=" mx-2 nav-icon">
 
                     <span class="side-menu__label">@lang('site.categories')</span></a>
             </li>
 
             <li class="slide my-3">
                 <a class="side-menu__item" href="{{ url('/' . ($page = 'products')) }}">
-                    <img src="{{ asset('assets/img/icons/8.png') }}" style="width: 30px" class=" mx-2 nav-icon">
+                    <img src="{{ asset('assets/img/icons/8.png') }}" style="width: 25px" class=" mx-2 nav-icon">
 
                     <span class="side-menu__label">@lang('site.products')</span></a>
             </li>
