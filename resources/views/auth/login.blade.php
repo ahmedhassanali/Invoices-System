@@ -20,7 +20,7 @@
                         <div class="row">
                             <div class="col-md-10 col-lg-10 col-xl-9 mx-auto">
                                 <div class="card-sigin">
-                                    <div class="mb-5">
+                                    <div class="mb-5  d-flex align-items-center justify-content-center">
                                        
 
                                             <a href="{{ url('/' . $page='Home') }}"><img src="{{URL::asset('assets/img/brand/favicon.png')}}" class="sign-favicon ht-55 mx-1 my-1 " alt="logo"></a>
