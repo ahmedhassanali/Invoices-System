@@ -154,11 +154,11 @@
                                 <span class="text-white op-7">
                                     @php
                                         $count_all = \App\Models\invoices::count();
-                                        $count_invoices1 = \App\Models\invoices::where('value_status', 1)->count();
-                                        if ($count_invoices1 == 0) {
-                                            echo $count_invoices1 = 0;
+                                        $count_invoices3 = \App\Models\invoices::where('value_status', 1)->count();
+                                        if ($count_invoices3 == 0) {
+                                            echo $count_invoices3 = 0;
                                         } else {
-                                            echo $count_invoices1 = ($count_invoices1 / $count_all) * 100;
+                                            echo $count_invoices3 = ($count_invoices3 / $count_all) * 100;
                                         }
                                     @endphp
                                 </span>
