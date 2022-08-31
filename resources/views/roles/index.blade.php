@@ -102,7 +102,7 @@
                                         @if ($role->name !== 'owner')
                                             @can('حذف صلاحية')
 
-                                            <a class="modal-effect btn  btn-danger" data-effect="effect-scale"
+                                            <a class="modal-effect btn  btn-danger btn-sm" data-effect="effect-scale"
                                                 data-role_id="{{ $role->id }}"
                                                 data-toggle="modal" href="#modaldemo8" title="حذف"><i
                                                 class="las la-trash"></i>@lang('site.delete')</a>
