@@ -31,7 +31,6 @@ Route::group(['prefix' => LaravelLocalization::setLocale() , 'middleware' => [ '
 {
 	
     
-        // Route::get('invoice/destroy/{id}',[InvoicesController::class,'destroy']);
         Route::get('/', function () {return view('auth.login');});
         
         Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -67,11 +66,6 @@ Route::group(['prefix' => LaravelLocalization::setLocale() , 'middleware' => [ '
         Route::resource('attachment', InvoiceAttachmentsController::class);
         
         Route::get('/{page}',[AdminController::class,'index']);
-        
-        
-
-
-
 });
 
 

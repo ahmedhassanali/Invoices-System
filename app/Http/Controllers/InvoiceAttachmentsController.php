@@ -9,15 +9,6 @@ use Illuminate\Support\Facades\Auth;
 class InvoiceAttachmentsController extends Controller
 {
  
-    public function index()
-    {
-        //
-    }
-
-    public function create()
-    {
-        //
-    }
 
     public function store(Request $request)
     {
@@ -43,26 +34,4 @@ class InvoiceAttachmentsController extends Controller
 
     }
 
-  
-    public function show(invoice_attachments $invoice_attachments)
-    {
-        //
-    }
-
-   
-    public function edit(invoice_attachments $invoice_attachments)
-    {
-        //
-    }
-
-    
-    public function update(Request $request, invoice_attachments $invoice_attachments)
-    {
-        //
-    }
-
- 
-    public function destroy(Request $request)
-    {
-    }
 }
