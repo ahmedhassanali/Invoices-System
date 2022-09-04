@@ -222,16 +222,16 @@
 @endsection
 @section('js')
     <!--Internal  Chart.bundle js -->
-    {{-- <script src='/assets/plugins/chart.js/Chart.bundle.min.js'></script> --}}
+    <script src='/assets/plugins/chart.js/Chart.bundle.min.js'></script>
     <!-- Moment js -->
-    {{-- <script src='/assets/plugins/raphael/raphael.min.js'></script> --}}
+    <script src='/assets/plugins/raphael/raphael.min.js'></script>
     <!--Internal  Flot js-->
     <script src='/assets/plugins/jquery.flot/jquery.flot.js'></script>
     <script src='/assets/plugins/jquery.flot/jquery.flot.pie.js'></script>
     <script src='/assets/plugins/jquery.flot/jquery.flot.resize.js'></script>
     <script src='/assets/plugins/jquery.flot/jquery.flot.categories.js'></script>
     {{-- <script src='/assets/js/dashboard.sampledata.js'></script> --}}
-    {{-- <script src='/assets/js/chart.flot.sampledata.js'></script> --}}
+    <script src='/assets/js/chart.flot.sampledata.js'></script>
     <!--Internal Apexchart js-->
     <script src='/assets/js/apexcharts.js'></script>
     <!-- Internal Map -->
