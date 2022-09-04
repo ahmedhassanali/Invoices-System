@@ -222,7 +222,7 @@
 @endsection
 @section('js')
     <!--Internal  Chart.bundle js -->
-    {{-- <script src='/assets/plugins/chart.js/Chart.bundle.min.js'></script> --}}
+    <script src='/assets/plugins/chart.js/Chart.bundle.min.js'></script>
     <!-- Moment js -->
     <script src='/assets/plugins/raphael/raphael.min.js'></script>
     <!--Internal  Flot js-->
