@@ -221,7 +221,7 @@
     <!-- Container closed -->
 @endsection
 @section('js')
-    <!--Internal  Chart.bundle js -->
+    {{-- <!--Internal  Chart.bundle js -->
     <script src='/assets/plugins/chart.js/Chart.bundle.min.js'></script>
     <!-- Moment js -->
     <script src='/assets/plugins/raphael/raphael.min.js'></script>
@@ -240,5 +240,5 @@
     <script src='/assets/js/modal-popup.js'></script>
     <!--Internal  index js -->
     <script src='/assets/js/index.js'></script>
-    <script src='/assets/js/jquery.vmap.sampledata.js'></script>
+    <script src='/assets/js/jquery.vmap.sampledata.js'></script> --}}
 @endsection
