@@ -27,7 +27,7 @@ use Illuminate\Support\Facades\URL;
 */
 
 Auth::routes();
-Route::group(['prefix' => LaravelLocalization::setLocale() , 'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath','auth'] ], function()
+Route::group(['prefix' => LaravelLocalization::setLocale() , 'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath','auth','cors'] ], function()
 {
 	
     
