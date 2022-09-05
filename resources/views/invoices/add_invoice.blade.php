@@ -60,8 +60,8 @@
             <div class="card">
                 <div class="card-body">
 
-                    <form action="{{ route('invoices.store') }}" method="post" enctype="multipart/form-data"
-                        autocomplete="off">
+                    <form action="{{ route('invoices.store') }}" method="post"
+                        enctype="multipart/form-data"autocomplete="off">
                         @csrf
 
                         {{-- 1 --}}
@@ -222,33 +222,33 @@
     </script>
 
 
-<script>
-    $(document).ready(function() {
-        $('select[name="Section"]').on('change', function() {
-            var SectionId = $(this).val();
-            if (SectionId) {
-                $.ajax({
-                    // url: "{{ URL::to('section') }}/" + SectionId,
-                    url: 'http://invoices-sys.herokuapp.com/ar/section/' + SectionId,
+    <script>
+        $(document).ready(function() {
+            $('select[name="Section"]').on('change', function() {
+                var SectionId = $(this).val();
+                if (SectionId) {
+                    $.ajax({
+                        // url: "{{ URL::to('section') }}/" + SectionId,
+                        url: 'http://invoices-sys.herokuapp.com/ar/section/' + SectionId,
 
-                    type: "GET",
-                    dataType: "json",
-                    success: function(data) {
-                        $('select[name="product"]').empty();
-                        $.each(data, function(key, value) {
-                            $('select[name="product"]').append('<option value="' +
-                                value + '">' + value + '</option>');
-                        });
-                    },
-                });
+                        type: "GET",
+                        dataType: "json",
+                        success: function(data) {
+                            $('select[name="product"]').empty();
+                            $.each(data, function(key, value) {
+                                $('select[name="product"]').append('<option value="' +
+                                    value + '">' + value + '</option>');
+                            });
+                        },
+                    });
 
-            } else {
-                console.log('AJAX load did not work');
-            }
+                } else {
+                    console.log('AJAX load did not work');
+                }
+            });
+
         });
-
-    });
-</script>
+    </script>
 
 
 
