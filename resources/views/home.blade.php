@@ -39,7 +39,7 @@
                             <div class="">
                                 <h4 class="tx-20 font-weight-bold mb-1 text-white">
 
-                                    {{ number_format(\App\Models\invoices::sum('total'), 2) }}
+                                    {{ number_format(\App\Models\invoices::sum('total'), 1) }}
                                 </h4>
                                 <p class="mb-0 tx-12 text-white op-7">{{ \App\Models\invoices::count() }}</p>
                             </div>
@@ -81,7 +81,7 @@
                                         if ($count_invoices2 == 0) {
                                             echo $count_invoices2 = 0;
                                         } else {
-                                            echo $count_invoices2 = ($count_invoices2 / $count_all) * 100;
+                                            echo $count_invoices2 =number_format(($count_invoices2 / $count_all) * 100 ,2) ;
                                         }
                                     @endphp
 
