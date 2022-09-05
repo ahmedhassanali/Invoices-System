@@ -120,7 +120,7 @@
                         type="button"><span aria-hidden="true">&times;</span></button>
                 </div>
                 <form action="{{route('categories.store')}}" method="post">
-                    @csrf
+                    {{ csrf_field() }}
 
                     <div class="modal-body">
 
@@ -155,7 +155,7 @@
                 </div>
                 <div class="modal-body">
                     <form action="categories/update" method="post">
-                        @csrf
+                        {{ csrf_field() }}
                         {{ method_field('patch') }}
 
 
