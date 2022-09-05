@@ -59,7 +59,7 @@
         
         <div class="col-lg-6 col-md-12 col-xs-12">
             <div class="row col-12 m-0 p-0">
-                <div class="col-lg-6 col-md-12 pr-0">
+                <div class="col-lg-6 col-md-12 px-1">
                     <div class="card overflow-hidden sales-card bg-primary-gradient ">
                         <div class="pl-3 pt-4 pr-3 pb-2 pt-0 ">
                             <div class="">
@@ -84,7 +84,7 @@
                         <span id="compositeline" class="pt-1">5,9,5,6,4,12,18,14,10,15,12,5,8,5,12,5,12,10,16,12</span>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-12 pr-0">
+                <div class="col-lg-6 col-md-12 px-1">
                     <div class="card overflow-hidden sales-card bg-danger-gradient">
                         <div class="pl-3 pt-4 pr-3 pb-2 pt-0">
                             <div class="">
@@ -126,7 +126,7 @@
                 </div>
             </div>
             <div class="row col-12 m-0 p-0">
-                <div class="col-lg-6 col-md-12 pr-0 ">
+                <div class="col-lg-6 col-md-12 px-1 ">
                     <div class="card overflow-hidden sales-card bg-success-gradient">
                         <div class="pl-3 pt-4 pr-3 pb-2 pt-0">
                             <div class="">
@@ -164,7 +164,7 @@
                         <span id="compositeline3" class="pt-1">5,10,5,20,22,12,15,18,20,15,8,12,22,5,10,12,22,15,16,10</span>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-12 pr-0">
+                <div class="col-lg-6 col-md-12 px-1">
                     <div class="card overflow-hidden sales-card bg-warning-gradient">
                         <div class="pl-3 pt-4 pr-3 pb-2 pt-0">
                             <div class="">
